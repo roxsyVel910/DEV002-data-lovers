@@ -2,13 +2,20 @@
 
 import { example } from './data.js';
 import data from './data/ghibli/ghibli.js';
+let contenedor = document.querySelector("#contenedor")
 
 
 
-for (const img in data) {
-  console.log(`${img}: ${data[img]}`);
-}
-console.log("esto es un ejemplo" , example, data, img);
+ const movies = data.films
+ console.log(movies);
+
+ movies.forEach(movie => {
+  contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
+  
+  
+ });
+console.log(movie);
+
 
 
 // import data from './data/lol/lol.js';
