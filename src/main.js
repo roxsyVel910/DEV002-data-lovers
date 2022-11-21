@@ -1,8 +1,8 @@
 
 
-import { example } from './data.js';
+//import { example } from './data.js';
 import data from './data/ghibli/ghibli.js';
-let contenedor = document.querySelector("#contenedor")
+let contenedor = document.querySelector("#contenedor");
 
 
 
@@ -10,6 +10,7 @@ let contenedor = document.querySelector("#contenedor")
  console.log(movies);
 
  movies.forEach(movie => {
+
   contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
   
   
