@@ -10,7 +10,6 @@ mobileMenu.classList.remove('activo')
 
 iconMenu.addEventListener('click', toggleMobileMenu);
 function toggleMobileMenu(){
-  alert("hice click");
   mobileMenu.classList.toggle('activo');
 }
 

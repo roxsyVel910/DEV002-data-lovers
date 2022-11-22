@@ -117,21 +117,22 @@ nav {
 /* movile navbar*/
 .mobile-menu {
   position: absolute;
-  top:60px;
-  padding: 24px;
+  top:90px;
+  padding: 34px;
+  background: rgba(27, 55, 101,0.7)
  
 }
 .oculto {
-  left: -200px;
+  left: -50px;
   transform: translateX(-200px);
   transition: transform 300ms;
 }
 .activo {
   transform: translateX(-200px);
-  transition: transform 300ms;
+  transition: transform 200ms;
 }
 
-.mobile-menu a {
+.mobile-menu li {
   text-decoration: none;
   color: #FFFFFF;
   font-weight: bold;
@@ -165,6 +166,7 @@ nav {
   .navbar-search {
     display: none;
   }
+  
 }
 @media (min-width: 641px) {
  .mobile-menu{
