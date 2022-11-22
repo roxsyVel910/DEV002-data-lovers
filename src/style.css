@@ -4,6 +4,9 @@ body{
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    background-image: url("fondo1.png");
+    background-size: cover; 
+
     }
     
     .contenedor-movies {
@@ -15,9 +18,25 @@ body{
         
     }
     .movies{
-        border: 1px solid rgb(85, 0, 255);
+        border: 3px solid rgb(85, 0, 255);
         
     }
     .img-movie{
+        border-radius: 18px;
+        
+    }
+
+
+    .searchbtn{
+        position: relative;
+        width: 756px;
+        height: 45px;
+        border:none;
+        background: #AB56EE;
+        border-radius: 13px;
+    
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif
         
     }
