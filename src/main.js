@@ -1,14 +1,16 @@
 
 
-//import { example } from './data.js';
+import  { filterData }  from './data.js';
 import data from './data/ghibli/ghibli.js';
 let contenedor = document.querySelector("#contenedor");
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
-
+const search = document.querySelector("#search");
 mobileMenu.classList.remove('activo')
 
+//console.log(" filtro data", filterData);
 /*mostara y ocultar menu mobile*/
+
 iconMenu.addEventListener('click', toggleMobileMenu);
 
 function toggleMobileMenu(){
@@ -29,6 +31,7 @@ function toggleMobileMenu(){
 
  var titulos = movies.map(function(titles) {
   return titles.title;
+
   
  });
  /*orden alfabetico*/
@@ -36,13 +39,27 @@ console.log("titulos", titulos.sort());
 
 
 /*buscador por palabras*/
-
- const buscador = (texto) => {
+/*search.addEventListener('input', texto => {
   return  titulos.filter(item => {
     return item.includes(texto);
+    
   })
-}
-console.log("buscar", buscador('Castle'));
+
+  });*/
+
+  /*filtrar imagenes de peliculas para mostrar*/
+  search.addEventListener("input", () => {
+    console.log(search.value);
+    /*if(nameInput.value == "") {
+      nameCard.innerText = "Nombre del usuario" 
+    }else{
+       nameCard.innerText = nameInput.value;
+     }*/
+    });
+
+  
+  console.log("searcha",search);
+
 
 
 

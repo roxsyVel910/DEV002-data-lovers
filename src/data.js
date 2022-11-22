@@ -1,6 +1,12 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
+export const filterData = (dataMovie, condition) =>{
+ return "datoskd";
+};
+
+
+
+/*export const example = () => {
   return 'pruebita';
 };
 
@@ -10,4 +16,4 @@ export const anotherExample = () => {
 
 export const sumar = (a, b) => {
   return a + b
-}
+}*/
