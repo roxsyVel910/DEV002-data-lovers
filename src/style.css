@@ -42,9 +42,13 @@ nav {
 .menu {
   display: none;
 }
+.menu:hover{
+  color: rgb(140, 135, 135);
+}
 
 .logo {
   width: 150px;
+  display: none;
 }
 
 .navbar-left ul,
@@ -65,16 +69,16 @@ nav {
   margin-left: 12px;
 }
 
-.navbar-left ul li a,
-.navbar-right ul li a {
+.navbar-left ul li ,
+.navbar-right ul li {
   text-decoration: none;
   color: #FFFFFF;
   padding: 8px;
   border-radius: 8px;
 }
 
-.navbar-left ul li a:hover,
-.navbar-right ul li a:hover {
+.navbar-left ul li:hover,
+.navbar-right ul li:hover {
   color: #ACD9B2;
 }
 
@@ -87,9 +91,68 @@ nav {
 .navbar-shopping-cart {
   position: relative;
 }
+/* navbar */
 
+.movies {
+  border: 3px solid rgb(85, 0, 255);
+
+}
+
+.img-movie {
+  border-radius: 18px;
+
+}
+.searchbtn {
+  position: relative;
+  width: 756px;
+  height: 45px;
+  border: none;
+  background: #AB56EE;
+  border-radius: 13px;
+
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif
+}
+/* movile navbar*/
+.mobile-menu {
+  position: absolute;
+  top:60px;
+  padding: 24px;
+ 
+}
+.oculto {
+  left: -200px;
+  transform: translateX(-200px);
+  transition: transform 300ms;
+}
+.activo {
+  transform: translateX(-200px);
+  transition: transform 300ms;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  /* margin-bottom: 24px; */
+}
+.mobile-menu ul {
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+.mobile-menu ul:nth-child(1) {
+  border-bottom: 1px solid #F7F7F7;
+}
+.mobile-menu ul li {
+  margin-bottom: 24px;
+}
 @media (max-width: 640px) {
   .menu {
+    display: block;
+  }
+  .logo {
     display: block;
   }
   .buscador{
@@ -103,29 +166,9 @@ nav {
     display: none;
   }
 }
-
-/* navbar */
-
-.movies {
-  border: 3px solid rgb(85, 0, 255);
-
+@media (min-width: 641px) {
+ .mobile-menu{
+  display: none;
+ }
 }
 
-.img-movie {
-  border-radius: 18px;
-
-}
-
-
-.searchbtn {
-  position: relative;
-  width: 756px;
-  height: 45px;
-  border: none;
-  background: #AB56EE;
-  border-radius: 13px;
-
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif
-}

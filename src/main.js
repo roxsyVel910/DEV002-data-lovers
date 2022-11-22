@@ -3,8 +3,16 @@
 //import { example } from './data.js';
 import data from './data/ghibli/ghibli.js';
 let contenedor = document.querySelector("#contenedor");
+const iconMenu = document.querySelector(".menu");
+const mobileMenu = document.querySelector(".mobile-menu");
+mobileMenu.classList.remove('activo')
 
 
+iconMenu.addEventListener('click', toggleMobileMenu);
+function toggleMobileMenu(){
+  alert("hice click");
+  mobileMenu.classList.toggle('activo');
+}
 
  const movies = data.films
  console.log(movies);
@@ -12,10 +20,18 @@ let contenedor = document.querySelector("#contenedor");
  movies.forEach(movie => {
 
   contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
-  
-  
+    
  });
-console.log(movie);
+const rta = movies.filter(item => item.title);
+console.log("repuest", rta.title)
+ const search = (query) => {
+  return  movies.filter(item => {
+    return item.title.includes(query);
+  })
+}
+console.log("buscar", search('castle'));
+
+
 
 
 
