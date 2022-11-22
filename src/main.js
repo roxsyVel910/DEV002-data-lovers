@@ -5,30 +5,44 @@ import data from './data/ghibli/ghibli.js';
 let contenedor = document.querySelector("#contenedor");
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
+
 mobileMenu.classList.remove('activo')
 
-
+/*mostara y ocultar menu mobile*/
 iconMenu.addEventListener('click', toggleMobileMenu);
+
 function toggleMobileMenu(){
   mobileMenu.classList.toggle('activo');
 }
 
+/*llamando al todo el API de studios Gilbli*/
  const movies = data.films
  console.log(movies);
 
+ /* mostara poster de peliculas en el Dom*/
  movies.forEach(movie => {
 
   contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
     
  });
-const rta = movies.filter(item => item.title);
-console.log("repuest", rta.title)
- const search = (query) => {
-  return  movies.filter(item => {
-    return item.title.includes(query);
+ /*llmando array de titulos */
+
+ var titulos = movies.map(function(titles) {
+  return titles.title;
+  
+ });
+ /*orden alfabetico*/
+console.log("titulos", titulos.sort());
+
+
+/*buscador por palabras*/
+
+ const buscador = (texto) => {
+  return  titulos.filter(item => {
+    return item.includes(texto);
   })
 }
-console.log("buscar", search('castle'));
+console.log("buscar", buscador('Castle'));
 
 
 
