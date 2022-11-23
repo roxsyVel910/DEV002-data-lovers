@@ -1,14 +1,16 @@
 
 
 import  { filterData }  from './data.js';
+
 import data from './data/ghibli/ghibli.js';
+
 let contenedor = document.querySelector("#contenedor");
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const search = document.querySelector("#search");
 mobileMenu.classList.remove('activo')
 
-//console.log(" filtro data", filterData);
+
 /*mostara y ocultar menu mobile*/
 
 iconMenu.addEventListener('click', toggleMobileMenu);
@@ -24,10 +26,10 @@ function toggleMobileMenu(){
  /* mostara poster de peliculas en el Dom*/
  movies.forEach(movie => {
 
-  contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
+  //contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
     
  });
- /*llmando array de titulos */
+ /*llamando array de titulos */
 
  var titulos = movies.map(function(titles) {
   return titles.title;
@@ -47,18 +49,22 @@ console.log("titulos", titulos.sort());
 
   });*/
 
+
+
+
+
   /*filtrar imagenes de peliculas para mostrar*/
-  search.addEventListener("input", () => {
-    console.log(search.value);
-    /*if(nameInput.value == "") {
-      nameCard.innerText = "Nombre del usuario" 
-    }else{
-       nameCard.innerText = nameInput.value;
-     }*/
+  search.addEventListener("keypress", (event) => {
+    if(event.key == "Enter"){
+    
+      filterData(movies, search.value)
+      
+      
+    } 
+    
     });
 
   
-  console.log("searcha",search);
 
 
 
