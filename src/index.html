@@ -4,21 +4,64 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-   
-  </head>
-  <body>
-     <p>Studio Ghilbli</p>
-     
-     <div class="castillo en el cielo"> </div>
-     <p>Castillo en el cielo y castillo negrohhhh
-      holaaaaaaaa
-     </p>
-
-
-     <img class="castillo_img" src="Castle_in_the_Sky.webp">
-    </div>
+  
     
-     <div id="root"></div>
+    <header>
+      <nav class="navbar">
+
+        <img src="./img/icon_menu.svg" alt="menu" class="menu">
+    
+        <div class="navbar-left">
+          <img src="./img/logob.png" alt="logo" class="logo">
+    
+          <ul>
+            <li>PELICULAS</li>
+            <li>PERSONAJES</li>
+            <li>DIRECTOR</li>
+            <li>PRODUCTOR</li>
+            <li>PUNTUACION</li>
+           
+          </ul>
+        </div>
+    
+        <div class="navbar-right">
+          <ul>
+            <li class="navbar-search">buscar</li>
+            <li class="navbar-searchs">
+              <img src="./iconos/icono-search.png" alt="busqueda">
+              
+            </li>
+          </ul>
+        </div>
+        
+        <div class="mobile-menu activo">
+          <ul>
+            <li>PELICULAS</li>
+            <li>PERSONAJES</li>
+            <li>DIRECTOR</li>
+            <li>PRODUCTOR</li>
+            <li>PUNTUACION</li>
+          </ul>
+        </div>
+    </nav>
+    <div class="buscador">
+      <img class="studio_logo" src="logob.png">
+     <input type="search" class="searchbtn" id="search" placeholder="Buscador"/>
+    </div>
+    <br>
+    </header>
+  </head>
+
+
+  <body>
+   
+    <section class="main-container">
+      
+      <div class="contenedor-movies" id="contenedor">
+      </div>
+    </section>
+   
     <script src="main.js" type="module"></script>
   </body>
 </html>
+  
