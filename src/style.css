@@ -1,5 +1,5 @@
 body {
-  margin: 30px;
+  margin: 0px;
   padding: 0;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
@@ -174,3 +174,35 @@ nav {
  }
 }
 
+/*pantalla up 2*/
+
+*{
+  background-color: rgb(31, 31, 90);
+    margin: 0px;
+     padding: 0;
+     font-size: 18px;
+     font-family: Arial, Helvetica, sans-serif;
+     color: aliceblue;
+     
+ 
+ }
+ .mainbackgroundsectionup{
+    background-size: 100%;
+    background-image: url("Castle_in_the_Sky.webp");
+   
+    height: 550px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+ }
+   
+ .mainbackground_down{
+   
+    width: 700px;
+    padding: 90px;
+  
+ }  
+ 
+ .form_label{
+    float: left;
+    margin: 15px;
+ }
