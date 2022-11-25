@@ -149,6 +149,38 @@ nav {
 .mobile-menu ul li {
   margin-bottom: 24px;
 }
+/* personajes */
+.avatar-personajes {
+  display: flex;
+  justify-content: ;
+  gap: 26px;
+}
+.avatar{
+  background-color: aqua;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar img {
+  width: 100%;
+  height: auto;
+ }
+
+*personajes*/
+
+.locacion-container {
+  
+  background-color:rgb(237, 233, 233);
+  border-top-right-radius: 100px;
+
+}
+.locacion-container img {
+  width: 100px;
+}
+
+
 @media (max-width: 640px) {
   .menu {
     display: block;
