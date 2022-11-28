@@ -1,0 +1,101 @@
+/*pantalla up 2*/
+
+body{
+    background-color: rgb(31, 31, 90);
+   
+       font-size: 18px;
+       font-family: Arial, Helvetica, sans-serif;
+       color: aliceblue;
+       
+   
+   }
+   .mainbackgroundsectionup{
+      margin: -10px;
+      padding: 0;
+      background-size: 100%;
+      background-image: url("Castle_in_the_Sky.webp");
+      background-position: 1em -5cm;
+      height: 550px;
+      border-bottom-right-radius: 90px;
+      border-bottom-left-radius: 90px;
+   }
+
+   /* .mainbackgroundsectionup{
+    background-image: url("Castle_in_the_Sky.webp");
+    background-size: cover;
+    background-position: 1em -20cm;
+ 
+    background-attachment: local;
+    height: 550px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+ } */
+
+     
+   .mainbackground_down{
+     
+      width: 700px;
+      padding: 90px;
+    
+   }  
+   
+   .form_label{
+      float: left;
+      margin: 15px;
+   }
+  
+   .titulo_pelicula{
+  
+    position: absolute;
+    left: 600px;
+    top: 250px;
+    background-position: 1em -20cm;
+  
+     font-size: 5em;
+     font-family: Arial, Helvetica, sans-serif;
+     color: aliceblue;
+     font-weight: bold;
+     text-shadow: 0px 8px 12px rgb(0, 0, 0)
+     
+  }
+
+  /* personajes */
+  .personajes-container{
+    padding: 6%;
+  }
+
+
+.avatar-personajes {
+    display: flex;
+    gap: 26px;
+  }
+
+  .avatar{
+    background-color: aqua;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .avatar img {
+    width: 100%;
+    height: auto;
+   }
+
+
+  
+   /* locaciones */
+   .locacion-container {
+    padding: 6%;
+    border-top-right-radius: 100px;
+  }
+  .locacion-container img {
+    
+    width: 150px;
+  }
+
+  .descripcion-txt{
+   display: flex;
+   width: 40%;;
+  }

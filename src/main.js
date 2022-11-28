@@ -9,7 +9,7 @@ const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const search = document.querySelector("#search");
 mobileMenu.classList.remove('activo');
-
+/*
 let slider = document.querySelector(".slider-contenedor")
 let sliderIndividual = document.querySelectorAll(".contenido-slider")
 let contador = 2;
@@ -39,7 +39,7 @@ function slides(){
         },1500)
     }
 }
-
+*/
 /*mostara y ocultar menu mobile*/
 
 iconMenu.addEventListener('click', toggleMobileMenu);

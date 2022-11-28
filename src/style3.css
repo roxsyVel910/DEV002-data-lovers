@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(31, 31, 90);
+   
+       font-size: 18px;
+       font-family: Arial, Helvetica, sans-serif;
+       color: aliceblue;
+
+}
+
+.avatar-personajes {
+    display: flex;
+    gap: 46px;
+    margin-top:-7%;
+    position: relative;
+    left: -8%;
+  }
+
+  .avatar{
+    background-color: aqua;
+    position: relative;
+    width: 700px;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .avatar img {
+    width: 100%;
+    height: auto;
+   
+   }
+
+   
