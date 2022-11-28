@@ -149,13 +149,13 @@ nav {
 .mobile-menu ul li {
   margin-bottom: 24px;
 }
-/* personajes */
+/* personajes
 .avatar-personajes {
   display: flex;
   justify-content: ;
   gap: 26px;
-}
-.avatar{
+} */
+/* .avatar{
   background-color: aqua;
   position: relative;
   width: 200px;
@@ -168,7 +168,10 @@ nav {
   height: auto;
  }
 
-*personajes*/
+*personajes*/ 
+
+/* 
+locacion containerr */
 
 .locacion-container {
   
@@ -206,7 +209,7 @@ nav {
  }
 }
 
-/*pantalla up 2*/
+/* pantalla up 2
 
 *{
   background-color: rgb(31, 31, 90);
@@ -221,7 +224,7 @@ nav {
  .mainbackgroundsectionup{
     background-size: 100%;
     background-image: url("Castle_in_the_Sky.webp");
-   
+    background-position: 1em -5cm;
     height: 550px;
     border-bottom-right-radius: 90px;
     border-bottom-left-radius: 90px;
@@ -238,3 +241,18 @@ nav {
     float: left;
     margin: 15px;
  }
+
+ .titulo_pelicula{
+
+  position: absolute;
+  left: 600px;
+  top: 250px;
+  background-position: 1em -20cm;
+
+   font-size: 5em;
+   font-family: Arial, Helvetica, sans-serif;
+   color: aliceblue;
+   font-weight: bold;
+   text-shadow: 0px 8px 12px rgb(0, 0, 0)
+   
+} */
