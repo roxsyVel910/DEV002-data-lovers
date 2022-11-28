@@ -8,8 +8,37 @@ let contenedor = document.querySelector("#contenedor");
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const search = document.querySelector("#search");
-mobileMenu.classList.remove('activo')
+mobileMenu.classList.remove('activo');
 
+let slider = document.querySelector(".slider-contenedor")
+let sliderIndividual = document.querySelectorAll(".contenido-slider")
+let contador = 2;
+let width = sliderIndividual[0].clientWidth;
+let intervalo = 4000;
+
+window.addEventListener("resize", function(){
+    width = sliderIndividual[0].clientWidth;
+})
+
+setInterval(function(){
+    slides();
+},intervalo);
+
+
+
+function slides(){
+    slider.style.transform = "translate("+(-width*contador)+"px)";
+    slider.style.transition = "transform .8s";
+    contador++;
+
+    if(contador == sliderIndividual.length){
+        setTimeout(function(){
+            slider.style.transform = "translate(0px)";
+            slider.style.transition = "transform 0s";
+            contador=1;
+        },1500)
+    }
+}
 
 /*mostara y ocultar menu mobile*/
 
@@ -25,8 +54,9 @@ function toggleMobileMenu(){
 
  /* mostara poster de peliculas en el Dom*/
  movies.forEach(movie => {
+  console.log("locacione",movie.locations)
 
-  //contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
+  contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
     
  });
  /*llamando array de titulos */
