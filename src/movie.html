@@ -1,106 +1,182 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>data lov2</title>
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style.css" />
+
+
 </head>
 
 <body>
-    <main class="maincontenedor">
-        <section class="mainbackgroundsectionup"> </section>
-        
-        <div>
-        <h1 class="titulo_pelicula">Castillo en el aire</h1>
-        </div>
-        
+    <header>
+        <nav class="navbar">
+
+            <img src="./img/icon_menu.svg" alt="menu" class="menu">
+
+            <div class="navbar-left">
+                <img src="./img/logob.png" alt="logo" class="logo">
+
+                <ul>
+                    <li><a href="movie.html">PELICULAS</a></li>
+                    <li><a href="personajes.html">PERSONAJES</a></li>
+                    <li>DIRECTOR</li>
+                    <li>PRODUCTOR</li>
+                    <li>PUNTUACION</li>
+
+                </ul>
+            </div>
+
+            <div class="navbar-right">
+                <ul>
+                    <li class="navbar-search">buscar</li>
+                    <li class="navbar-searchs">
+                        <img src="./iconos/icono-search.png" alt="busqueda">
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mobile-menu activo">
+                <ul>
+                    <li> PELICULAS</li>
+                    <li>PERSONAJES</li>
+                    <li>DIRECTOR</li>
+                    <li>PRODUCTOR</li>
+                    <li>PUNTUACION</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container-movies_descripcion">
+        <section class="container-banner">
+            <section class="life">
+
+                <h1 class="h1">
+                    <span class="nowrap">Castel in the sky.</span>
+
+                </h1>
+                <figure class="profile-pic">
+                    <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg"
+                        alt="Profile Picture" title="My Profile Picture" width="2895" height="3264">
+                    <figcaption class="offscreen">Patricia Ciurescu</figcaption>
+                </figure>
+            </section>
+
+        </section>
         <section class="mainbackground_down">
-            <form class="form_director" id= "section"> 
+            <div class="form_director">
+                <div class="form_ranking">
 
-            <div class="form_año"> 
-            <label class="form_label" for="director">Director</label>  
-            </div> 
+                    <label class="label-ranking" for="ranking"><img src="./iconos/starts.png" alt=""> 95</label>
+                </div>
 
-            <div class="form_año"> 
-                <label class="form_label" for="año">Año</label>
-                </div> 
+                <div class="form_año">
 
-                <div class="form_ranking"> 
-                    <label class="form_label" for="ranking">Ranking</label>
-                    </div> 
-            <br>                
-             <div >
-           <br>
-          <h1 class="descripcion-txt">Descripción</h1>
-          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
-         </div>
-         </form>
-         </section>
-         <div class="personajes-container">
+                    <label class="label-director" for="director"><img src="./iconos/director.png"
+                            alt="">Director</label>
+                </div>
+
+                <div class="form_año">
+                    <label class="label-anio" for="año">Año</label>
+                </div>
+            </div>
+            <div class="description-movie">
+
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                    sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+            </div>
+
+        </section>
+        <section class="personajes-container">
             <h2>Personajes</h2><br>
             <div class="avatar-personajes">
-                <div class="avatar"> <img src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt=""> </div>
-                <div class="avatar"> <img src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt=""> </div>
-                <div class="avatar"> <img src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt=""> </div>
-                <div class="avatar"> <img src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt=""> </div>
-                <div class="avatar"> <img src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt=""> </div>
-                <div class="avatar"> <img src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt=""> </div>
+                <div class="avatar"> <img
+                        src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt="">
+                        <p>Nombre</p>
+                </div>
+                <div class="avatar"> <img
+                        src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt="">
+                </div>
+                <div class="avatar"> <img
+                        src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt="">
+                </div>
+                <div class="avatar"> <img
+                        src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt="">
+                </div>
+                <div class="avatar"> <img
+                        src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt="">
+                </div>
+                <div class="avatar"> <img
+                        src="https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg" alt="">
+                </div>
             </div>
-        </div>
+        </section>
+        <section class="locacion-container">
+            <div class="slider-contenedor">
+                <section class="contenido-slider">
+                    <div>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa ipsam aliquam natus
+                            quidem
+                            sed. Quos cupiditate id delectus est.</h2>
+                       
+                    </div>
+                    <img src="https://static.wikia.nocookie.net/studio-ghibli/images/2/25/Thumbnail-8.jpeg" alt="">
 
-        <div class="">
-            <h2>locaciones</h2>
-            <div class="">
-                <div class="container-slide">
-                    <div class="slider-contenedor">
-                        <section class="contenido-slider">
-                            <div>
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa ipsam aliquam natus quidem
-                                    sed. Quos cupiditate id delectus est.</h2>
-                                <a href="#">Contact us</a>
-                            </div>
-                            <img src="https://static.wikia.nocookie.net/studio-ghibli/images/2/25/Thumbnail-8.jpeg" alt="">
-                                       
-                        </section>
-                        <section class="contenido-slider">
-                            <div>
-                                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa ipsam aliquam natus quidem
-                                    sed. Quos cupiditate id delectus est.</h2>
-                                <a href="#">Contact us</a>
-                            </div>
-                            <img src="https://preview.redd.it/fmikehlh8dl41.jpg?auto=webp&s=a997a7d6726fc151a438985899b052d0fd357716" alt="">
-            
-                        </section>
-                    <section class="contenido-slider">
-                        <div>
-                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa ipsam aliquam natus quidem
-                                sed. Quos cupiditate id delectus est.</h2>
-                            <a href="#">Contact us</a>
-                        </div>
-                        <img src="https://static.wikia.nocookie.net/studio-ghibli/images/e/e7/Laputa.png" alt="">
-            
-                    </section>
-                    <section class="contenido-slider">
-                        <div>
-                            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa ipsam aliquam natus quidem
-                                sed. Quos cupiditate id delectus est.</h2>
-                            <a href="#">Contact us</a>
-                        </div>
-                        <img src="https://static.wikia.nocookie.net/studio-ghibli/images/2/25/Thumbnail-8.jpeg" alt="">
-            
-                    </section>
-                </div>
-                </div>
+                </section>
+                <section class="contenido-slider">
+                    <div>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa ipsam aliquam natus
+                            quidem
+                            sed. Quos cupiditate id delectus est.</h2>
+                    </div>
+                    <img src="https://static.wikia.nocookie.net/studio-ghibli/images/2/25/Thumbnail-8.jpegg" alt="">
 
-        <div class="veniculos">
-    
+                </section>
+                <section class="contenido-slider">
+                    <div>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa ipsam aliquam natus
+                            quidem
+                            sed. Quos cupiditate id delectus est.</h2>
+                        <a href="#">Contact us</a>
+                    </div>
+                    <img src="https://static.wikia.nocookie.net/studio-ghibli/images/2/25/Thumbnail-8.jpeg" alt="">
+
+                </section>
+                <section class="contenido-slider">
+                    <div>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa ipsam aliquam natus
+                            quidem
+                            sed. Quos cupiditate id delectus est.</h2>
+                    </div>
+                    <img src="https://static.wikia.nocookie.net/studio-ghibli/images/2/25/Thumbnail-8.jpeg" alt="">
+
+                </section>
+            </div>
+        </section>
+        <div class="vehiculos-container">
+            <div class="img-vehiculo">
+                <img src="https://static.wikia.nocookie.net/studio-ghibli/images/e/e5/Goliath.png" alt="">
+            </div>
+            <div class="descripcion-vehiculo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum repudiandae veniam esse dolorem omnis at, eligendi fugit nemo dolores ut dicta consequatur nesciunt, rerum, excepturi sapiente voluptate corporis aperiam quasi?</p>
+            </div>
+
+
         </div>
-        <script src="main.js" type="module"></script>
+    </main>
+
+
+    <script src="main2.js" type="module"></script>
+
 </body>
 
-</html> 
+</html>

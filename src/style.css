@@ -1,30 +1,46 @@
-body {
-  margin: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+*{
+  margin: 0;
   padding: 0;
-  font-size: 18px;
+
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
+
+}
+.main-container {
+  text-align: center;
+  background-image: url("./img/fondo1.png") ;
+  background-size: cover;
+  overflow: hidden;
+
+  
+}
+.buscador img {
+  padding-top: 50px;
 }
 
 
 .contenedor-movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, 350px);
-  gap: 26px;
-  justify-content: space-between;
-  text-align: center;
-  background-image: url("./img/fondo1.png");
-  background-size: cover;
+  gap: 20px;
+  justify-content: space-evenly;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .movies {
   width: 350px;
 
-  border: 1px solid red;
+  
 
 }
 
 .movies img {
-  width: 350px;
+  width: 320px;
   height: 530px;
   border-radius: 20px;
   object-fit: cover;
@@ -35,8 +51,12 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
-  border-bottom: 1px solid black;
+ 
+  background-color: #0000008c;
+  position: fixed;
+  width: 100%;
+
+
 }
 
 .menu {
@@ -91,12 +111,9 @@ nav {
 .navbar-shopping-cart {
   position: relative;
 }
-/* navbar mobile*/
+/* navbar */
 
-.movies {
-  border: 3px solid rgb(85, 0, 255);
 
-}
 
 .img-movie {
   border-radius: 18px;
@@ -104,15 +121,16 @@ nav {
 }
 .searchbtn {
   position: relative;
-  width: 756px;
-  height: 45px;
+  width: 90%;
+  height: 65px;
   border: none;
-  background: #AB56EE;
+  background: #bbb7beb1;
   border-radius: 13px;
-
   color: rgb(255, 255, 255);
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 70px;
 }
 /* movile navbar*/
 .mobile-menu {
@@ -122,7 +140,6 @@ nav {
   background: rgba(27, 55, 101,0.7)
  
 }
-/*menu hamburguesa*/
 .oculto {
   left: -50px;
   transform: translateX(-200px);
@@ -151,54 +168,141 @@ nav {
   margin-bottom: 24px;
 }
 
-.avatar-personajes {
+/* banner movies 2*/
 
- 
-  justify-content: center;
- gap: 2%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
- 
+
+/* End Reset */ 
+
+.nowrap {
+  white-space: nowrap;
 }
-/*.avatar{
 
-  display: flex;
-  justify-content: ;
-  gap: 26px;
-} */
-.avatar{
+.dowrap {
+  white-space: nowrap;
+  color:#348ada;
+}
 
-  background-color: aqua;
-  position: relative;
-  width: 200px;
-  height: 200px;
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.container-banner {
+  
+ 
+  background-image: url(./img/banner-movie.jpg);
+  background-size: cover;
   overflow: hidden;
-  border-radius: 50%;
+  
 }
-.avatar img {
+
+.life {
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-right: 40px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+ 
+}
+
+.life .h1 {
+  font-size: 270%;
+  color: #FFF;
+  text-shadow: 1px 1px 2px pink;
+  margin-right: 15%;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+}
+
+.profile-pic {
+  width: 25%;
+  margin-right: 8%;
+}
+
+.profile-pic img {
   width: 100%;
   height: auto;
+  min-width: 100px;
+  border: 5px double #76bcf5 ;
+  border-image: linear-gradient(#97b8e4, #013a70) 60;
+  display: block;
+  
+}
+.container-movies_descripcion {
+  background-color:rgb(20, 27, 47) ;
+  color: #F7F7F7;
+
+}
+.mainbackground_down{
+
+}
+.form_ranking img {
+  width: 30px;
+}
+.form_año img {
+  width: 30px;
+}
+
+/*descripcion*/
+.form_director{
+  margin-left: 100px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  font-size: 30px;
+}
+  
+  .form_ranking .label-ranking {
+    color: green;
+  }
+  .description-movie{
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+ /* personajes */
+ .personajes-container{
+  padding: 6%;
+}
+
+
+.avatar-personajes {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+  justify-content: space-evenly;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.avatar img{
+ 
+  border-radius: 50%;
+ 
+  width: 200px;
+  height: 200px;
+}
+.avatar {
+  
+  position: relative;
+  
+  overflow: hidden;
+ 
+ }
+ .avatar p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
  }
 
+/*locacion containerr */
 
-/*locacion*/
-
-
-
-
-.locacion-container {
-  
-  background-color:rgb(237, 233, 233);
-  border-top-right-radius: 100px;
-
-}
-.locacion-container img {
-  width: 100px;
-}
-/*sliders locaciones*/
-
-
-.container-slide{
+.locacion-container{
   width: 100%;
   overflow: hidden;
 }
@@ -227,7 +331,7 @@ nav {
 }
 
 .contenido-slider > img{
-  width: 400px;
+  width: 300px;
 }
 
 .contenido-slider > div{
@@ -240,22 +344,34 @@ nav {
   line-height: 30px;
 }
 
-.contenido-slider a{
-  color: #fff;
-  background: #332863;
-  width: 100px;
-  display: block;
-  padding: 15px 0;
-  text-align: center;
-  border-radius: 3px;
-  margin-top: 20px;
-  text-decoration: none;
-}
+
 
 .contenido-slider:nth-child(2) a{
   background: #fff;
   color: #332863;
   
+}
+.vehiculos-container {
+ 
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.vehiculos-container .img-vehiculo {
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 50px;
+}
+
+.img-vehiculo img {
+  width:100% ;
+
+}
+.descripcion-vehiculo{
+  margin: 50px 20px;
 }
 
 @media screen and (max-width:900px){
@@ -284,8 +400,33 @@ nav {
 
 }
 
-/* pantalla up 2
 
+@media (max-width: 640px) {
+  .menu {
+    display: block;
+  }
+  .logo {
+    display: block;
+  }
+  .buscador{
+    display: none;
+  }
+  .navbar-left ul {
+    display: none;
+  }
+
+  .navbar-search {
+    display: none;
+  }
+  
+}
+@media (min-width: 641px) {
+ .mobile-menu{
+  display: none;
+ }
+}
+
+/* pantalla up 2
 *{
   background-color: rgb(31, 31, 90);
     margin: 0px;
@@ -316,14 +457,11 @@ nav {
     float: left;
     margin: 15px;
  }
-
  .titulo_pelicula{
-
   position: absolute;
   left: 600px;
   top: 250px;
   background-position: 1em -20cm;
-
    font-size: 5em;
    font-family: Arial, Helvetica, sans-serif;
    color: aliceblue;
