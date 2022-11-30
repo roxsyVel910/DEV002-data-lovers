@@ -8,7 +8,7 @@ let contenedor = document.querySelector("#contenedor");
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const search = document.querySelector("#search");
-mobileMenu.classList.remove('activo');
+
 
 
 /*mostara y ocultar menu mobile*/
@@ -30,12 +30,14 @@ function toggleMobileMenu(){
   console.log("locacion", movie.locations);
 
   contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
+  
     
  });
+ 
 
   document.querySelector('.img-movie').addEventListener('click', posterMovie);
   function posterMovie(){
-     console.log("click umages");
+     console.log("click",movies);
   }
 
  /*llamando array de titulos */
