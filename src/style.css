@@ -12,7 +12,7 @@ body {
 }
 .main-container {
   text-align: center;
-  background-image: url("./img/fondo1.png") ;
+  background-image: url("img/nubes.jpg");
   background-size: cover;
   overflow: hidden;
 
@@ -52,9 +52,10 @@ nav {
   display: flex;
   justify-content: space-between;
  
-  background-color: #0000008c;
+  background-color: rgba(24, 195, 207, 0.148);
   position: fixed;
   width: 100%;
+  
 
 
 }
@@ -63,7 +64,7 @@ nav {
   display: none;
 }
 .menu:hover{
-  color: rgb(140, 135, 135);
+  color: rgb(255, 255, 255);
 }
 
 .logo {
@@ -79,67 +80,86 @@ nav {
   display: flex;
   align-items: center;
   height: 60px;
+  
 }
 
 .navbar-left {
   display: flex;
+  
 }
 
 .navbar-left ul {
   margin-left: 12px;
+  
 }
+
+/* NAV LETRAS */
 
 .navbar-left ul li ,
 .navbar-right ul li {
+  
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 8px;
   border-radius: 8px;
+  text-shadow: 0px 8px 12px rgb(0, 0, 0)
+  
 }
 
 .navbar-left ul li:hover,
 .navbar-right ul li:hover {
-  color: #ACD9B2;
+  color: #f802ec;
 }
 
 .navbar-search {
-  color: #F7F7F7;
+  color: #ffffff;
   font-size: 16px;
   margin-right: 12px;
+ 
+  text-shadow: 0px 0px 0px rgb(0, 0, 0)
+
 }
 
 .navbar-shopping-cart {
   position: relative;
 }
+
+
+
 /* navbar */
-
-
 
 .img-movie {
   border-radius: 18px;
-
 }
+
 .searchbtn {
   position: relative;
+  padding: 25px;
   width: 90%;
-  height: 65px;
+  height: 55px;
   border: none;
-  background: #bbb7beb1;
+  background: #f5e9ffb1;
   border-radius: 13px;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 250, 250) ;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 50px;
   margin-bottom: 70px;
+ 
+  
+  
 }
+
+
 /* movile navbar*/
 .mobile-menu {
   position: absolute;
   top:90px;
   padding: 34px;
-  background: rgba(27, 55, 101,0.7)
- 
+  background:  #00000025;
 }
+
+preguntas
 .oculto {
   left: -50px;
   transform: translateX(-200px);
@@ -154,6 +174,8 @@ nav {
   text-decoration: none;
   color: #FFFFFF;
   font-weight: bold;
+
+
   /* margin-bottom: 24px; */
 }
 .mobile-menu ul {
@@ -188,16 +210,13 @@ nav {
 }
 
 .container-banner {
-  
- 
+
   background-image: url(https://i.gifer.com/4tl2.gif);
   background-size: cover;
   overflow: hidden;
-  
 }
 
 .life {
-  
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -209,12 +228,14 @@ nav {
 }
 
 .life .h1 {
-  font-size: 270%;
+  font-size: 370%;
   color: #FFF;
   text-shadow: 1px 1px 2px pink;
   margin-right: 15%;
   font-family: 'Cabin', sans-serif;
   text-transform: uppercase;
+  text-shadow: 0px 8px 12px rgb(0, 0, 0)
+
 }
 
 .profile-pic {
@@ -227,24 +248,27 @@ nav {
   height: auto;
   min-width: 100px;
   border: 5px double #76bcf5 ;
-  border-image: linear-gradient(#97b8e4, #013a70) 60;
+  border-image: linear-gradient(#97b8e4, #074176) 60;
   display: block;
-  
 }
-.container-movies_descripcion {
-  background-color:rgb(20, 27, 47) ;
-  color: #F7F7F7;
 
+.container-movies_descripcion {
+  background-color:   #03053af0;
+  color: #F7F7F7;
 }
+
 .mainbackground_down{
 
 }
+
 .form_ranking img {
   width: 30px;
 }
+
 .form_año img {
   width: 30px;
 }
+
 
 /*descripcion*/
 .form_director{
@@ -258,17 +282,19 @@ nav {
   .form_ranking .label-ranking {
     color: green;
   }
+
   .description-movie{
     margin-top: 30px;
     margin-left: 100px;
     margin-right: 100px;
   }
 
+
  /* personajes */
+
  .personajes-container{
   padding: 6%;
 }
-
 
 .avatar-personajes {
   
@@ -281,24 +307,23 @@ nav {
 }
 
 .avatar img{
- 
   border-radius: 50%;
  
   width: 200px;
   height: 200px;
 }
+
 .avatar {
-  
   position: relative;
-  
   overflow: hidden;
- 
  }
+
  .avatar p {
   color: #fff;
   font-size: 12px;
   font-weight: bold;
  }
+
 
 /*locacion containerr */
 
@@ -426,46 +451,123 @@ nav {
  }
 }
 
-/* pantalla up 2
-*{
-  background-color: rgb(31, 31, 90);
-    margin: 0px;
-     padding: 0;
-     font-size: 18px;
-     font-family: Arial, Helvetica, sans-serif;
-     color: aliceblue;
-     
- 
- }
- .mainbackgroundsectionup{
-    background-size: 100%;
-    background-image: url("Castle_in_the_Sky.webp");
-    background-position: 1em -5cm;
-    height: 550px;
-    border-bottom-right-radius: 90px;
-    border-bottom-left-radius: 90px;
- }
-   
- .mainbackground_down{
-   
-    width: 700px;
-    padding: 90px;
+a:link {
+  text-decoration: none;
   
- }  
- 
- .form_label{
-    float: left;
-    margin: 15px;
- }
- .titulo_pelicula{
-  position: absolute;
-  left: 600px;
-  top: 250px;
-  background-position: 1em -20cm;
-   font-size: 5em;
-   font-family: Arial, Helvetica, sans-serif;
-   color: aliceblue;
-   font-weight: bold;
-   text-shadow: 0px 8px 12px rgb(0, 0, 0)
+}
+/* pantalla up 2
+
+
+body{
+      margin: 0%;
+       min-height: 100%;  
+   }
+  
+
+  /* Pagina Inicio */
+
+
+  
+  .fondo-inicio{
+    position: relative;
+    top: -490px;
+    z-index: -1;
+    
+    
+   }
+   .logo-inicio{
+    
+    position: relative;
+    left: 20%;
+    bottom: -70px;
+  }
+  
+  
+    .navbar-inicio{
+      
+        overflow: hidden;
+        background-color: #00000039;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        
+    }
+  
+    .navbar-inicio a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 60px;
+    }
+    
+    .navbar-inicio a:hover {
+      background: #f1f1f1;
+      color: black;
+    }
+    
+     .navbar-inicio a.active {
+      background-color: #6a6b5b;
+      color: white;
+    } 
+    
+    .main {
+      padding: 16px;
+      margin-bottom: 30px;
+    }
+  
+    .menu-active{
+      margin: auto;
+      position: relative;
+      left: 43%;
+      
+    }
+  
+    .menuinicio{
+      background-image: url(img/menu1.png)
+     
+    }
+  
+    
+    
+  /* //personajes */
+  
+    .avatar2{
+        background-image: url(https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg);
+        background-size: 100%;
+        position: relative;
+        right: 11%;
+        z-index: -2;
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+  .fondo-personajes{
+    position: relative;
+    z-index: -1;
+  
+  }
+    .main-personajes{
+    
+    position: relative;
+    top: 100%;
+    height: 60%;
+    width: 200%;
+    margin: 50px;
+    padding: 70px;
+    align-items: center;
    
-} */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+    background-color: #ff74f3;
+    border-radius: 50px;
+
+    
+    
+    
+  
+    }
