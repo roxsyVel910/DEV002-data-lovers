@@ -1,8 +1,9 @@
 /*pantalla up 2*/
 
 body{
-    background-color: rgb(31, 31, 90);
-   
+      margin: 0%;
+       background-color: rgb(31, 31, 90);
+       min-height: 100%;
        font-size: 18px;
        font-family: Arial, Helvetica, sans-serif;
        color: aliceblue;
@@ -20,18 +21,6 @@ body{
       border-bottom-left-radius: 90px;
    }
 
-   /* .mainbackgroundsectionup{
-    background-image: url("Castle_in_the_Sky.webp");
-    background-size: cover;
-    background-position: 1em -20cm;
- 
-    background-attachment: local;
-    height: 550px;
-    border-bottom-right-radius: 90px;
-    border-bottom-left-radius: 90px;
- } */
-
-     
    .mainbackground_down{
      
       width: 700px;
@@ -98,4 +87,90 @@ body{
   .descripcion-txt{
    display: flex;
    width: 40%;;
+  }
+
+  /* Pagina Inicio */
+ .fondo-inicio{
+  position: relative;
+  z-index: -1;
+
+ }
+
+  .logo-inicio{
+  margin:20%;
+  position: relative;
+  top: -77em;
+
+  }
+
+  .navbar-inicio{
+    
+      overflow: hidden;
+      background-color: rgb(10, 28, 85);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 20%;
+  }
+
+  .navbar-inicio a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 60px;
+  }
+  
+  .navbar-inicio a:hover {
+    background: #f1f1f1;
+    color: black;
+  }
+  
+  /* .navbar-inicio a.active {
+    background-color: #6a6b5b;
+    color: white;
+  } */
+  
+  .main {
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+
+  .menu-active{
+    margin: auto;
+    position: fixed;
+    left: 45%;
+    
+  }
+
+
+
+  /* PERSONAJES */
+  /* .personajes{
+
+    position: relative;
+    left:50%;
+    bottom: -17em;
+  } */
+  .avatar2{
+      
+      background-image: url(https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg);
+      background-size: 100%;
+      position: relative;
+      right: 11%;
+
+      width: 700px;
+      height: 600px;
+      overflow: hidden;
+      border-bottom-right-radius: 70%;
+      
+    
+  }
+
+  .main-personajes{
+   position: relative;
+   
+
   }
