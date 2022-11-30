@@ -1,116 +1,38 @@
-/*pantalla up 2*/
 
 body{
       margin: 0%;
-       background-color: rgb(31, 31, 90);
-       min-height: 100%;
-       font-size: 18px;
-       font-family: Arial, Helvetica, sans-serif;
-       color: aliceblue;
-       
-   
-   }
-   .mainbackgroundsectionup{
-      margin: -10px;
-      padding: 0;
-      background-size: 100%;
-      background-image: url("Castle_in_the_Sky.webp");
-      background-position: 1em -5cm;
-      height: 550px;
-      border-bottom-right-radius: 90px;
-      border-bottom-left-radius: 90px;
-   }
-
-   .mainbackground_down{
-     
-      width: 700px;
-      padding: 90px;
-    
-   }  
-   
-   .form_label{
-      float: left;
-      margin: 15px;
+       min-height: 100%;  
    }
   
-   .titulo_pelicula{
-  
-    position: absolute;
-    left: 600px;
-    top: 250px;
-    background-position: 1em -20cm;
-  
-     font-size: 5em;
-     font-family: Arial, Helvetica, sans-serif;
-     color: aliceblue;
-     font-weight: bold;
-     text-shadow: 0px 8px 12px rgb(0, 0, 0)
-     
-  }
-
-  /* personajes */
-  .personajes-container{
-    padding: 6%;
-  }
-
-
-.avatar-personajes {
-    display: flex;
-    gap: 26px;
-  }
-
-  .avatar{
-    background-color: aqua;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
-  }
-  .avatar img {
-    width: 100%;
-    height: auto;
-   }
-
-
-  
-   /* locaciones */
-   .locacion-container {
-    padding: 6%;
-    border-top-right-radius: 100px;
-  }
-  .locacion-container img {
-    
-    width: 150px;
-  }
-
-  .descripcion-txt{
-   display: flex;
-   width: 40%;;
-  }
 
   /* Pagina Inicio */
+
+
+  
  .fondo-inicio{
   position: relative;
+  top: -490px;
   z-index: -1;
-
+  
+  
  }
-
-  .logo-inicio{
-  margin:20%;
+ .logo-inicio{
+  
   position: relative;
-  top: -77em;
+  left: 20%;
+  bottom: -70px;
+}
 
-  }
 
   .navbar-inicio{
     
       overflow: hidden;
-      background-color: rgb(10, 28, 85);
+      background-color: #00000039;
       position: fixed;
       bottom: 0;
       width: 100%;
-      height: 20%;
+      height: 15%;
+      
   }
 
   .navbar-inicio a {
@@ -128,10 +50,10 @@ body{
     color: black;
   }
   
-  /* .navbar-inicio a.active {
+   .navbar-inicio a.active {
     background-color: #6a6b5b;
     color: white;
-  } */
+  } 
   
   .main {
     padding: 16px;
@@ -140,22 +62,24 @@ body{
 
   .menu-active{
     margin: auto;
-    position: fixed;
-    left: 45%;
-    
+    position: relative;
+    left: 43%;
   }
 
+  .menuinicio{
+    background-image: url(img/menu1.png)
+   
+  }
+  /* //quitar forma enlace link menu movies */
+  .peliculas-text{
+    text-decoration:none;
+  }
+  
+  /* //quitar enlace link menu movies */
+  
+/* //personajes */
 
-
-  /* PERSONAJES */
-  /* .personajes{
-
-    position: relative;
-    left:50%;
-    bottom: -17em;
-  } */
   .avatar2{
-      
       background-image: url(https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg);
       background-size: 100%;
       position: relative;
@@ -165,12 +89,33 @@ body{
       height: 600px;
       overflow: hidden;
       border-bottom-right-radius: 70%;
-      
-    
+  }
+.fondo-personajes{
+
+  position: relative;
+ 
+  z-index: -1;
+
+}
+  .main-personajes{
+  
+  position: relative;
+  margin: 20px;
+  padding: 70px;
+  align-items: center;
+  left: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f1f1;
+  background-color: #00000039;
+  border-radius: 50px;
+  
+  
+  
+
   }
 
-  .main-personajes{
-   position: relative;
-   
+
+  .no-sub{
+
 
   }
