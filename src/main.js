@@ -4,11 +4,16 @@ import data from './data/ghibli/ghibli.js';
 
 
 
+
+
 let contenedor = document.querySelector("#contenedor");
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const search = document.querySelector("#search");
 
+const descripcionMovieSelct = document.querySelector(".description-movie");  
+ const titleMovie = document.querySelector('.titleMovie');  
+ let idMovie = document.querySelectorAll(".idMovie");
 
 
 /*mostara y ocultar menu mobile*/
@@ -25,20 +30,20 @@ function toggleMobileMenu(){
  const movies = data.films
  console.log(movies);
 
+
+  
  /* mostara poster de peliculas en el Dom*/
- movies.forEach(movie => {
+movies.forEach(movie => {
   console.log("locacion", movie.locations);
 
-  contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
+  contenedor.innerHTML += `<a class="movies" href ="movie.html?titulo=${movie.title}" > <img src= "${movie.poster}" class="img-movie" >
+                                
+                           </a>`
   
-    
  });
  
-
-  document.querySelector('.img-movie').addEventListener('click', posterMovie);
-  function posterMovie(){
-     console.log("click",movies);
-  }
+  
+ //document.querySelector('.movies').addEventListener('click', posterMovie);
 
  /*llamando array de titulos */
 
@@ -50,33 +55,28 @@ function toggleMobileMenu(){
  /*orden alfabetico*/
 console.log("titulos", titulos.sort());
 
-
-/*buscador por palabras*/
-/*search.addEventListener('input', texto => {
-  return  titulos.filter(item => {
-    return item.includes(texto);
-    
-  })
-  });*/
-
-
-
-
-
   /*filtrar imagenes de peliculas para mostrar*/
   search.addEventListener("keypress", (event) => {
     if(event.key == "Enter"){
     
-      filterData(movies, search.value)
-      
+     const result = filterData(movies, search.value);
+      renderPosters(result);
       
     } 
     
     });
 
-  
+/* manipulacion del dom filter*/
+const renderPosters = (result) => {
+  contenedor.innerHTML = "";
+  result.forEach(element => {
+    contenedor.innerHTML += `<div class="movies"> <img src= "${element.poster}" class="img-movie" >
+                                    <span class= "idMovie"> ${element.id} </span>
+                              </div>`
+  });
 
 
+}
 
 
 
@@ -85,7 +85,7 @@ console.log("titulos", titulos.sort());
 //import data from './data/ghibli/ghibli.js';
 
 /*const API = './data/ghibli/ghibli.json/films';
-import data from './data/rickandmorty/rickandmorty.js';
+
 fetch(API)
   .then(res => res.json())
   .then(data => {

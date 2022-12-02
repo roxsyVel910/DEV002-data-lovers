@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Buscador de peliculas</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Buscador de peliculas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <img src="./img/icon_menu.svg" alt="menu" class="menu">
-        <div class="navbar-left">
-          <img src="./img/logob.png" alt="logo" class="logo">
-    
-          <ul>
-            <li><a href ="index.html">PELICULAS</a></li>
-            <li><a href ="personajes.html">PERSONAJES</a></li>
-            <li>DIRECTOR</li>
-            <li>PRODUCTOR</li>
-            <li>PUNTUACION</li>
-           
-          </ul>
-        </div>
-    
-        <div class="navbar-right">
-          <ul>
-           <li class="navbar-search">buscar</li>
-            <li class="navbar-searchs">
-              <img src="./iconos/icono-search.png" alt="busqueda">
-              
-            </li>
-          </ul>
-        </div>
-        
-        <div class="mobile-menu">
-          <ul>
-            <li> PELICULAS</li>
-            <li>PERSONAJES</li>
-            <li>DIRECTOR</li>
-            <li>PRODUCTOR</li>
-            <li>PUNTUACION</li>
-          </ul>
-        </div>
+<body>
+ 
+  <header>
+    <nav class="navbar">
+      <img src="./img/icon_menu.svg" alt="menu" class="menu">
+      <div class="navbar-left">
+        <img src="./img/logob.png" alt="logo" class="logo">
+
+        <ul>
+          <li><a href="movie.html">PELICULAS</a></li>
+          <li><a href="personajes.html">PERSONAJES</a></li>
+          <li>DIRECTOR</li>
+          <li>PRODUCTOR</li>
+          <li>PUNTUACION</li>
+
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <ul>
+          <li class="navbar-search">buscar</li>
+          <li class="navbar-searchs">
+            <img src="./iconos/icono-search.png" alt="busqueda">
+
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu">
+        <ul>
+          <li> PELICULAS</li>
+          <li>PERSONAJES</li>
+          <li>DIRECTOR</li>
+          <li>PRODUCTOR</li>
+          <li>PUNTUACION</li>
+        </ul>
+      </div>
     </nav>
-    </header>
-    
+  </header>
+   
+  
 
-   
-    <section class="main-container">
-      <div class="buscador">
-        <img class="studio_logo" src="logob.png">
-       <input type="search" class="searchbtn" id="search" placeholder="Buscador"/>
-      </div>
-      
-      <div class="contenedor-movies" id="contenedor">
-      </div>
-    </section>
-   
-    <script src="main.js" type="module"></script>
+  <section class="main-container">
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
     
-  </body>
+    <div class="buscador">
+      <img class="studio_logo" src="logob.png">
+      <input type="search" class="searchbtn" id="search" placeholder="Buscador" />
+    </div>
+    
+    <div class="contenedor-movies" id="contenedor">
+    </div>
+  </section>
+
+  <script src="main.js" type="module"></script>
+
+</body>
+
 </html>
