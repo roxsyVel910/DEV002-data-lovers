@@ -9,7 +9,6 @@ const movies = data.films
    
   
 
-  //contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
     
  }); 
 

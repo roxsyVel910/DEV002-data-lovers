@@ -20,6 +20,7 @@ body {
 }
 .buscador img {
   padding-top: 50px;
+  
 }
 
 
@@ -30,6 +31,7 @@ body {
   justify-content: space-evenly;
   padding-left: 3%;
   padding-right: 3%;
+
 }
 
 .movies {
@@ -44,6 +46,7 @@ body {
   height: 530px;
   border-radius: 20px;
   object-fit: cover;
+  
 }
 
 
@@ -52,7 +55,7 @@ nav {
   display: flex;
   justify-content: space-between;
  
-  background-color: rgba(24, 195, 207, 0.148);
+  background-color: rgba(24, 195, 207, 0.264);
   position: fixed;
   width: 100%;
   
@@ -64,7 +67,7 @@ nav {
   display: none;
 }
 .menu:hover{
-  color: rgb(255, 255, 255);
+  color: rgb(179, 59, 59);
 }
 
 .logo {
@@ -108,7 +111,7 @@ nav {
 
 .navbar-left ul li:hover,
 .navbar-right ul li:hover {
-  color: #f802ec;
+  color: #f8fbff;
 }
 
 .navbar-search {
@@ -138,9 +141,9 @@ nav {
   width: 90%;
   height: 55px;
   border: none;
-  background: #f5e9ffb1;
+  background: #ffffffb1;
   border-radius: 13px;
-  color: rgb(255, 250, 250) ;
+  color: rgb(255, 255, 255) ;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 50px;
@@ -159,7 +162,7 @@ nav {
   background:  #00000025;
 }
 
-preguntas
+
 .oculto {
   left: -50px;
   transform: translateX(-200px);

@@ -1,4 +1,6 @@
 // tratamos de filtara los poster por titulo
+
+
 let contenedor = document.querySelector("#contenedor");
 
 export const filterData = (dataMovie, condition) =>{
