@@ -1,7 +1,10 @@
-import  { filterData }  from './data.js';
+import  { 
+  filterData,
+  sortData, 
+}  from './data.js';
+
 
 import data from './data/ghibli/ghibli.js';
-
 
 
 
@@ -14,7 +17,7 @@ const search = document.querySelector("#search");
 const descripcionMovieSelct = document.querySelector(".description-movie");  
  const titleMovie = document.querySelector('.titleMovie');  
  let idMovie = document.querySelectorAll(".idMovie");
-
+ const iconoSort = document.querySelector(".sort");
 
 /*mostara y ocultar menu mobile*/
 
@@ -25,18 +28,16 @@ function toggleMobileMenu(){
 }
 
 
-
 /*llamando al todo el API de studios Gilbli*/
  const movies = data.films
- console.log(movies);
-
+ console.log(movies.title);
 
   
  /* mostara poster de peliculas en el Dom*/
 movies.forEach(movie => {
   console.log("locacion", movie.locations);
 
-  contenedor.innerHTML += `<a class="movies" href ="movie.html?titulo=${movie.title}" > <img src= "${movie.poster}" class="img-movie" >
+  contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${movie.title}" > <img src= "${movie.poster}" class="img-movie" >
                                 
                            </a>`
   
@@ -45,15 +46,30 @@ movies.forEach(movie => {
   
  //document.querySelector('.movies').addEventListener('click', posterMovie);
 
- /*llamando array de titulos */
-
- var titulos = movies.map(function(titles) {
-  return titles.title;
+ /*llamando sort de titulos */
+ 
+ var titulosmovies = movies.map(function(titulos) {
+  return titulos.title;
 
   
  });
+ console.log("titulos movies", titulosmovies)
+ iconoSort.addEventListener('click', renderSortMenu)
+
+
+function renderSortMenu(){
+  const sortMovies = sortData(titulosmovies);
+  renderSortMovie(sortMovies);
+}
+const renderSortMovie = (sortMovies) => {
+  
+ console.log("sort movies",sortMovies)
+
+}
+
+
  /*orden alfabetico*/
-console.log("titulos", titulos.sort());
+console.log("titulos", titulosmovies.sort());
 
   /*filtrar imagenes de peliculas para mostrar*/
   search.addEventListener("keypress", (event) => {
@@ -70,14 +86,12 @@ console.log("titulos", titulos.sort());
 const renderPosters = (result) => {
   contenedor.innerHTML = "";
   result.forEach(element => {
-    contenedor.innerHTML += `<div class="movies"> <img src= "${element.poster}" class="img-movie" >
-                                    <span class= "idMovie"> ${element.id} </span>
-                              </div>`
+    contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${element.title}" > <img src= "${element.poster}" class="img-movie" >
+                                
+                             </a>`
   });
 
-
 }
-
 
 
 
@@ -91,3 +105,4 @@ fetch(API)
   .then(data => {
     console.log(data);
   }); */
+

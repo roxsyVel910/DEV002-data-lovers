@@ -10,5 +10,11 @@ export const filterData = (dataMovie, condition) =>{
 
   }
 
+export const sortData = (data) => {
+  return data.sort();
+
+  }
+
  
 
+  

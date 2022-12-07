@@ -1,22 +1,8 @@
-import data from './data/ghibli/ghibli.js';
-
-const movies = data.films
- console.log(movies);
-
-  /*mostara poster de peliculas en el Dom*/
- movies.map(movie => {
-    console.log(movie.locations)
-   
-  
-
-    
- }); 
-
 let slider = document.querySelector(".slider-contenedor")
 let sliderIndividual = document.querySelectorAll(".contenido-slider")
-let contador = 2;
+let contador = 1;
 let width = sliderIndividual[0].clientWidth;
-let intervalo = 4000;
+let intervalo = 3000;
 
 window.addEventListener("resize", function(){
     width = sliderIndividual[0].clientWidth;
@@ -29,7 +15,7 @@ setInterval(function(){
 
 
 function slides(){
-    slider.style.transform = "translate("+(-width*contador)+"px)";
+    slider.style.transform = "translate("+(-hwidt*contador)+"px)";
     slider.style.transition = "transform .8s";
     contador++;
 
@@ -41,4 +27,3 @@ function slides(){
         },1500)
     }
 }
-
