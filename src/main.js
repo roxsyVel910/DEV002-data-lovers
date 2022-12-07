@@ -36,7 +36,7 @@ function toggleMobileMenu(){
 movies.forEach(movie => {
   console.log("locacion", movie.locations);
 
-  contenedor.innerHTML += `<a class="movies" href ="movie.html?titulo=${movie.title}" > <img src= "${movie.poster}" class="img-movie" >
+  contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${movie.title}" > <img src= "${movie.poster}" class="img-movie" >
                                 
                            </a>`
   

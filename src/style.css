@@ -3,26 +3,22 @@
 *{
   margin: 0;
   padding: 0;
-
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-
 }
 .main-container {
   text-align: center;
   background-image: url("img/nubes.jpg");
   background-size: cover;
   overflow: hidden;
-
-  
 }
+
 .buscador img {
   padding-top: 50px;
   
 }
-
 
 .contenedor-movies {
   display: grid;
@@ -31,14 +27,10 @@ body {
   justify-content: space-evenly;
   padding-left: 3%;
   padding-right: 3%;
-
 }
 
 .movies {
   width: 350px;
-
-  
-
 }
 
 .movies img {
@@ -46,11 +38,10 @@ body {
   height: 530px;
   border-radius: 20px;
   object-fit: cover;
-  
 }
 
 
-/*navbar destokp*/
+/*navbar destokp up*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -58,20 +49,18 @@ nav {
   background-color: rgba(24, 195, 207, 0.264);
   position: fixed;
   width: 100%;
-  
-
-
 }
 
 .menu {
   display: none;
 }
+
 .menu:hover{
   color: rgb(179, 59, 59);
 }
 
 .logo {
-  width: 150px;
+  width: 250px;
   display: none;
 }
 
@@ -83,20 +72,17 @@ nav {
   display: flex;
   align-items: center;
   height: 60px;
-  
 }
 
 .navbar-left {
-  display: flex;
-  
+  display: flex; 
 }
 
 .navbar-left ul {
   margin-left: 12px;
-  
 }
 
-/* NAV LETRAS */
+/* NAV LETRAS up */
 
 .navbar-left ul li ,
 .navbar-right ul li {
@@ -106,7 +92,6 @@ nav {
   padding: 8px;
   border-radius: 8px;
   text-shadow: 0px 8px 12px rgb(0, 0, 0)
-  
 }
 
 .navbar-left ul li:hover,
@@ -118,7 +103,7 @@ nav {
   color: #ffffff;
   font-size: 16px;
   margin-right: 12px;
- 
+
   text-shadow: 0px 0px 0px rgb(0, 0, 0)
 
 }
@@ -148,9 +133,6 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 50px;
   margin-bottom: 70px;
- 
-  
-  
 }
 
 
@@ -162,12 +144,12 @@ nav {
   background:  #00000025;
 }
 
-
 .oculto {
   left: -50px;
   transform: translateX(-200px);
   transition: transform 300ms;
 }
+
 .activo {
   transform: translateX(-200px);
   transition: transform 200ms;
@@ -227,7 +209,6 @@ nav {
   margin-right: 40px;
   padding-top: 100px;
   padding-bottom: 50px;
- 
 }
 
 .life .h1 {
@@ -260,9 +241,9 @@ nav {
   color: #F7F7F7;
 }
 
-.mainbackground_down{
+/* .mainbackground_down{
 
-}
+} */
 
 .form_ranking img {
   width: 30px;
@@ -493,7 +474,7 @@ body{
         position: fixed;
         bottom: 0;
         width: 100%;
-        height: 20%;
+        height: 15%;
         
     }
   
@@ -508,8 +489,12 @@ body{
     }
     
     .navbar-inicio a:hover {
-      background: #f1f1f1;
-      color: black;
+      background: #2c11c8;
+      color: rgb(0, 0, 0);
+      border-radius: 50%;
+      
+      
+   
     }
     
      .navbar-inicio a.active {
@@ -525,35 +510,19 @@ body{
     .menu-active{
       margin: auto;
       position: relative;
-      left: 43%;
-      
+      left: 43%; 
     }
   
+    
+
     .menuinicio{
       background-image: url(img/menu1.png)
      
     }
   
-    
-    
-  /* //personajes */
-  
-    .avatar2{
-        background-image: url(https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg);
-        background-size: 100%;
-        position: relative;
-        right: 11%;
-        z-index: -2;
-        width: 400px;
-        height: 400px;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-  .fondo-personajes{
-    position: relative;
-    z-index: -1;
-  
-  }
+
+
+/*  modales */
     .main-personajes{
     
     position: relative;
@@ -566,8 +535,8 @@ body{
    
     font-family: Arial, Helvetica, sans-serif;
     color: #f1f1f1;
-    background-color: #ff74f3;
-    border-radius: 50px;
+    background-color: #f074bc;
+    border-radius: 30px;
 
     
     
@@ -577,7 +546,7 @@ body{
 
     /*loader */
     .loader {
-      background: rgb(206, 204, 204);
+      background: #f074bc;
       width: 100%;
       height: 100%;
       display: flex;
@@ -585,7 +554,6 @@ body{
       align-items: center;
       position: absolute;
       z-index: 3;
-  
       animation: loader 2s linear forwards;
   }
   
@@ -604,7 +572,7 @@ body{
   }
   
   .loader div {
-      background: blue;
+      background: rgb(255, 255, 255);
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -640,4 +608,80 @@ body{
         transform: scale(0.2)
     }
 } 
+ 
+
+/* MODAL */
+
+
+
+#myBtn {
+
+  position:absolute;
+  background-size: 100%;
   
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; /* Enable scroll if needed */
+  background-color: red; /* fondo color */
+  background-color: rgba(0,0,0,0.4); /* transparencia */
+}
+
+/* Modal Content */
+.modal-content {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+    background-color: #f074bc;
+    border-radius: 30px;
+    margin: 50px;
+    padding: 40px;
+    width: 80%;
+    top: 20px;
+    
+  
+  
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+/* boton cerrado */
+.close:hover,
+.close:focus {
+  color: aqua;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+  
+
+
+.avatar2 {
+      position: relative;
+      width: 80%;
+      left: 50%;
+      background-size: 90%; 
+      width: 200px;
+      height: 200px;
+      border-radius: 50%
+  
+    }
+
+

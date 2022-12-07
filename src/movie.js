@@ -27,7 +27,7 @@ console.log(" ksajdoisdfhsoid",movieData)
 descripcionMovieSelct.innerHTML = `<p>${movieData.description}</p>`;
 titleMovie.innerHTML += `<span class="nowrap">${movieData.title}</span>`;
 
-/*manipulacion dom  descripcon de peliculas*/
+/*manipulación DOM  descripción de peliculas*/
 
 console.log("lugardd" , movieData.locations);
 
@@ -40,7 +40,36 @@ person.forEach(element => {
                             </div>`
         console.log("personajes",element);
     
-});
+
+    });
+
+    var modal = document.getElementById("myModal");
+
+// EL BOTON ABRE EL MODAL
+var btn = document.getElementById("myBtn");
+
+// EL ELEMENTO SPAN CIERRA EL MODAL 
+var span = document.getElementsByClassName("close")[0];
+
+// CUANDO EL USUARIO HACE CLICK Y ABRE EL MODAL
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Cuando usuarix haga click en <span> (x), cierre modal 
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Cuando el usuario haga click fuera del modal, se cierre
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+
+
 
 
 
