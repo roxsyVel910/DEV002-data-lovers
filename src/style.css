@@ -1,49 +1,36 @@
-body {
-  margin: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+*{
+  margin: 0;
   padding: 0;
-  font-size: 18px;
+
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  background-image: url("./img/fondo1.png");
-  background-size: cover;
-}
-
-
-.contenedor-movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
-  gap: 26px;
-  justify-content: space-between;
-}
-
-.movies {
-  width: 350px;
-
-  border: 1px solid red;
 
 }
-
-.movies img {
-  width: 350px;
-  height: 530px;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-
 /*navbar destokp*/
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
-  border-bottom: 1px solid black;
+  background-color: rgba(24, 195, 207, 0.264);
+  position: fixed;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 20px;
+}
+.navbar li a{
+  text-decoration: none;
+  color: #f2f2f2;
 }
 
 .menu {
   display: none;
 }
 .menu:hover{
-  color: rgb(140, 135, 135);
+  color: rgb(179, 59, 59);
 }
 
 .logo {
@@ -59,69 +46,155 @@ nav {
   display: flex;
   align-items: center;
   height: 60px;
+  
 }
 
 .navbar-left {
   display: flex;
+  
 }
 
 .navbar-left ul {
   margin-left: 12px;
+  
 }
+
+
+/* NAV LETRAS */
+
 
 .navbar-left ul li ,
 .navbar-right ul li {
+  
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 8px;
   border-radius: 8px;
+  text-shadow: 0px 8px 12px rgb(0, 0, 0)
+  
 }
 
 .navbar-left ul li:hover,
 .navbar-right ul li:hover {
-  color: #ACD9B2;
+  color: #f8fbff;
 }
 
 .navbar-search {
-  color: #F7F7F7;
+  color: #ffffff;
   font-size: 16px;
   margin-right: 12px;
+ 
+  text-shadow: 0px 0px 0px rgb(0, 0, 0)
+
 }
 
 .navbar-shopping-cart {
   position: relative;
 }
-/* navbar */
+
+
+
+/* end navbar */
+/* buscador*/
+.searchbtn::placeholder {
+  color: rgb(20, 18, 18);
+  font-size: 1.2em;
+  font-style: italic;
+  
+}
+.searchbtn img{
+  width: 10px;
+}
+.input-icon {
+	color: #191919;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.input-icon{
+	left: unset;
+	right: 12px;
+}
+.main-container {
+  text-align: center;
+  background-image: url("img/nubes.jpg");
+  background-size: cover;
+  overflow: hidden; 
+  
+}
+
+.buscador img {
+  padding-top: 50px;
+  
+}
+
+
+.contenedor-movies {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 20px;
+  justify-content: space-evenly;
+ margin-left: 8%;
+ margin-right: 8.5%;
+
+}
 
 .movies {
-  border: 3px solid rgb(85, 0, 255);
+  width: 300px;
+
+  
 
 }
+
+.movies img {
+ width: 90%;
+  
+}
+
+
+
 
 .img-movie {
-  border-radius: 18px;
+  border-radius: 10px;
+  border: 3px solid whitesmoke;
+
 
 }
+
 .searchbtn {
   position: relative;
-  width: 756px;
-  height: 45px;
+  padding:  20px ;
+  width: 80%;
+  height: 50px;
   border: none;
-  background: #AB56EE;
-  border-radius: 13px;
-
-  color: rgb(255, 255, 255);
+  background: #ffffffb1;
+  border-radius: 10px;
+  color: rgb(255, 255, 255) ;
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  margin-left: 5%;
+ 
+  
+  
 }
+
+
 /* movile navbar*/
 .mobile-menu {
   position: absolute;
   top:90px;
   padding: 34px;
-  background: rgba(27, 55, 101,0.7)
- 
+  background:  #00000025;
 }
+
+
 .oculto {
   left: -50px;
   transform: translateX(-200px);
@@ -136,6 +209,8 @@ nav {
   text-decoration: none;
   color: #FFFFFF;
   font-weight: bold;
+
+
   /* margin-bottom: 24px; */
 }
 .mobile-menu ul {
@@ -149,6 +224,232 @@ nav {
 .mobile-menu ul li {
   margin-bottom: 24px;
 }
+
+
+/* banner movies 2*/
+
+
+/* End Reset */ 
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.dowrap {
+  white-space: nowrap;
+  color:#348ada;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.container-banner {
+/*https://i.pinimg.com/564x/88/15/7f/88157f51a7130456867ffadbdcf69d77.jpg*/
+  background-image: url(./img/banner-moovie.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.life {
+  display: flex;
+  
+  align-items: center;
+
+  gap: 30px;
+  margin-right: 40px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+
+ 
+}
+.life .titleMovie {
+  margin-right:60px ;
+  margin-left: 10%;
+  background-color: #6a6b5b54;
+  padding: 4%;
+}
+.life .titleMovie h1 {
+  font-size: 60px;
+  color: #FFF;
+  text-shadow: 1px 1px 2px pink;
+  margin-bottom: 20px;
+  
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0px 8px 12px rgb(0, 0, 0)
+
+}
+
+.profile-pic {
+  width: 50%;
+  margin-right: 10%;
+}
+
+
+.profile-pic img {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  min-width: 300px;
+  border: 5px double #76bcf5 ;
+  border-image: linear-gradient(#97b8e4, #074176) 60;
+  display: block;
+}
+
+.container-movies_descripcion {
+  background-color:   #03053af0;
+  color: #F7F7F7;
+}
+
+
+
+.form_ranking img {
+  width: 30px;
+}
+
+.form_año img {
+  width: 30px;
+}
+
+
+/*descripcion*/
+.mainbackground_down{
+ background-color: rgba(15, 19, 85, 0.3);
+  padding: 10px 0px; 
+  
+
+}
+.form_director{
+  margin-left: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content:center;
+  gap: 3%;
+
+
+  font-size: 30px;
+  
+}
+  .form_director div {
+   
+    padding: 30px;
+    border-bottom:4px solid #f2f2f2; 
+  }
+  .form_director div:hover {
+    background-color: #19191949;
+    border-bottom:4px solid #ba0f0f;
+  }
+  .form_ranking .label-ranking {
+    color: green;
+  }
+
+  
+
+
+ /* personajes */
+
+ .personajes-container{
+  padding: 6%;
+}
+
+.avatar-personajes {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+  justify-content: space-evenly;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.avatar img{
+  border-radius: 50%;
+ 
+  width: 200px;
+  height: 200px;
+}
+
+.avatar {
+  position: relative;
+  overflow: hidden;
+ }
+
+ .avatar p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+ }
+
+
+/*locacion containerr */
+
+.locaciones-contenedor{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  gap: 20px;
+  justify-content: space-evenly;
+  padding-left: 3%;
+  padding-right: 3%;
+  background: hwb(309 7% 66%);
+
+}
+.locaciones-contenedor .contenido-locacion img{
+  width:400px ;
+  border-radius: 6px;
+  border: 2px solid #bfbfbc;
+}
+.vehiculos-container {
+ 
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.vehiculos-container .img-vehiculo {
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 50px;
+}
+
+.img-vehiculo img {
+  width:100% ;
+
+}
+.descripcion-vehiculo{
+  margin: 50px 20px;
+}
+
+@media screen and (max-width:900px){
+  .contenido-slider > img{
+      width: 250px;
+  }
+
+  .contenido-slider > div{
+      width: 40%;
+  }
+
+  .contenido-slider h2{
+      font-size: 23px;
+  }
+}
+
+
+@media screen and (max-width:600px){
+  .contenido-slider{
+     flex-direction: column-reverse;
+  }
+
+  .contenido-slider > div{
+      width: 80%;
+  }
+
+}
+
+
 @media (max-width: 640px) {
   .menu {
     display: block;
@@ -174,3 +475,191 @@ nav {
  }
 }
 
+a:link {
+  text-decoration: none;
+  
+}
+/* pantalla up 2
+
+
+body{
+      margin: 0%;
+       min-height: 100%;  
+   }
+  
+
+  /* Pagina Inicio */
+
+
+  
+  .fondo-inicio{
+    position: relative;
+    top: -490px;
+    z-index: -1;
+    
+    
+   }
+  
+   .logo-inicio{
+    
+    position: relative;
+    left: 20%;
+    bottom: -70px;
+  }
+  
+  
+    .navbar-inicio{
+      
+        overflow: hidden;
+        background-color: #00000039;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        
+    }
+  
+    .navbar-inicio a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 60px;
+    }
+    
+    .navbar-inicio a:hover {
+      background: #f1f1f1;
+      color: black;
+    }
+    
+     .navbar-inicio a.active {
+      background-color: #6a6b5b;
+      color: white;
+    } 
+    
+    .main {
+      padding: 16px;
+      margin-bottom: 30px;
+    }
+  
+    .menu-active{
+      margin: auto;
+      position: relative;
+      left: 43%;
+      
+    }
+  
+    .menuinicio{
+      background-image: url(img/menu1.png)
+     
+    }
+  
+    
+    
+  /* //personajes */
+  
+    .avatar2{
+        background-image: url(https://static.wikia.nocookie.net/studio-ghibli/images/f/f2/Satsuki_Kusakabe.jpg);
+        background-size: 100%;
+        position: relative;
+        right: 11%;
+        z-index: -2;
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+  .fondo-personajes{
+    position: relative;
+    z-index: -1;
+  
+  }
+    .main-personajes{
+    
+    position: relative;
+    top: 100%;
+    height: 60%;
+    width: 200%;
+    margin: 50px;
+    padding: 70px;
+    align-items: center;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+    background-color: #ff74f3;
+    border-radius: 50px;
+
+    
+    
+    
+  
+    }
+
+    /*loader */
+    .loader {
+      background: rgb(206, 204, 204);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 3;
+  
+      animation: loader 2s linear forwards;
+  }
+  
+  @keyframes loader {
+      0% {
+          opacity: 1;
+          visibility: visible;
+      }
+      95% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+          visibility: hidden;
+      }
+  }
+  
+  .loader div {
+      background: blue;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 10px;
+  
+      transform: scale(0);
+  
+      animation: scaling 2s ease-in-out  infinite;
+  }
+  
+  .loader div:nth-child(1) {
+      animation-delay: 0.8s;
+  }
+  
+  .loader div:nth-child(2) {
+      animation-delay: 0.10s;
+  }
+  
+  .loader div:nth-child(3) {
+      animation-delay: 0.12s;
+  }
+  @keyframes scaling {
+    0% {
+        transform: scale(0.2);
+    }
+    40% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(0.2)
+    }
+} 
+  

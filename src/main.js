@@ -1,15 +1,23 @@
+import  { 
+  filterData,
+  sortData, 
+}  from './data.js';
 
-
-import  { filterData }  from './data.js';
 
 import data from './data/ghibli/ghibli.js';
+
+
+
 
 let contenedor = document.querySelector("#contenedor");
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const search = document.querySelector("#search");
-mobileMenu.classList.remove('activo')
 
+const descripcionMovieSelct = document.querySelector(".description-movie");  
+ const titleMovie = document.querySelector('.titleMovie');  
+ let idMovie = document.querySelectorAll(".idMovie");
+ const iconoSort = document.querySelector(".sort");
 
 /*mostara y ocultar menu mobile*/
 
@@ -19,55 +27,71 @@ function toggleMobileMenu(){
   mobileMenu.classList.toggle('activo');
 }
 
+
 /*llamando al todo el API de studios Gilbli*/
  const movies = data.films
- console.log(movies);
+ console.log(movies.title);
 
+  
  /* mostara poster de peliculas en el Dom*/
- movies.forEach(movie => {
+movies.forEach(movie => {
+  console.log("locacion", movie.locations);
 
-  //contenedor.innerHTML += `<div class="movies"> <img src= "${movie.poster}" class="img-movie" > </div>`
-    
+  contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${movie.title}" > <img src= "${movie.poster}" class="img-movie" >
+                                
+                           </a>`
+  
  });
- /*llamando array de titulos */
+ 
+  
+ //document.querySelector('.movies').addEventListener('click', posterMovie);
 
- var titulos = movies.map(function(titles) {
-  return titles.title;
+ /*llamando sort de titulos */
+ 
+ var titulosmovies = movies.map(function(titulos) {
+  return titulos.title;
 
   
  });
+ console.log("titulos movies", titulosmovies)
+ iconoSort.addEventListener('click', renderSortMenu)
+
+
+function renderSortMenu(){
+  const sortMovies = sortData(titulosmovies);
+  renderSortMovie(sortMovies);
+}
+const renderSortMovie = (sortMovies) => {
+  
+ console.log("sort movies",sortMovies)
+
+}
+
+
  /*orden alfabetico*/
-console.log("titulos", titulos.sort());
-
-
-/*buscador por palabras*/
-/*search.addEventListener('input', texto => {
-  return  titulos.filter(item => {
-    return item.includes(texto);
-    
-  })
-
-  });*/
-
-
-
-
+console.log("titulos", titulosmovies.sort());
 
   /*filtrar imagenes de peliculas para mostrar*/
   search.addEventListener("keypress", (event) => {
     if(event.key == "Enter"){
     
-      filterData(movies, search.value)
-      
+     const result = filterData(movies, search.value);
+      renderPosters(result);
       
     } 
     
     });
 
-  
+/* manipulacion del dom filter*/
+const renderPosters = (result) => {
+  contenedor.innerHTML = "";
+  result.forEach(element => {
+    contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${element.title}" > <img src= "${element.poster}" class="img-movie" >
+                                
+                             </a>`
+  });
 
-
-
+}
 
 
 
@@ -75,8 +99,6 @@ console.log("titulos", titulos.sort());
 //import data from './data/ghibli/ghibli.js';
 
 /*const API = './data/ghibli/ghibli.json/films';
-import data from './data/rickandmorty/rickandmorty.js';
-
 
 fetch(API)
   .then(res => res.json())
