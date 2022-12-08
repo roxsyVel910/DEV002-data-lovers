@@ -1,6 +1,8 @@
 import  { 
   filterData,
-  sortByTitle, 
+  sortByTitleAsc, 
+  sortByTitleDesc,
+  
 }  from './data.js';
 
 
@@ -18,8 +20,35 @@ const descripcionMovieSelct = document.querySelector(".description-movie");
  const titleMovie = document.querySelector('.titleMovie');  
  let idMovie = document.querySelectorAll(".idMovie");
  const iconoSort = document.querySelector(".sort");
+const iconoSortDesc = document.querySelector(".sortDesc");
+const directorName = document.querySelector(".director");
+const productorName = document.querySelector(".productor");
+ const directorNameMovies = 'director';
+ const  director = directorName.value;
+/*filtrado de directores*/
 
-/*mostara y ocultar menu mobile*/
+directorName.addEventListener('change', (event) => {
+  console.log('Me deben una cerveza', directorName.value)
+  const changeDirectors = filterData(movies, directorName.value.toLowerCase(), directorNameMovies);
+  renderDirectores(changeDirectors);
+});
+
+const renderDirectores = (changeDirectors) => {
+  console.log("director",changeDirectors)
+
+  contenedor.innerHTML = "";
+  changeDirectors.forEach(elem => {
+    contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${elem.title}" > <img src= "${elem.poster}" class="img-movie" >
+                                  
+                             </a>`
+ }); 
+}
+/*filtrado de productores 
+productorName.addEventListener('change', (event) => {
+  const filmsProductor = filterProductor(movies.productorName.value, 'producer');
+  console.log(" producers",filmsProductor)
+})*/
+
 
 iconMenu.addEventListener('click', toggleMobileMenu);
 
@@ -30,12 +59,11 @@ function toggleMobileMenu(){
 
 /*llamando al todo el API de studios Gilbli*/
  const movies = data.films
- console.log(movies.title);
+
 
   
  /* mostara poster de peliculas en el Dom*/
 movies.forEach(movie => {
-  console.log("locacion", movie.locations);
 
   contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${movie.title}" > <img src= "${movie.poster}" class="img-movie" >
                                 
@@ -43,7 +71,8 @@ movies.forEach(movie => {
   
  });
  
-  
+  /* filtrar peliculas por director*/
+
  //document.querySelector('.movies').addEventListener('click', posterMovie);
 
  /*llamando sort de titulos */
@@ -58,12 +87,43 @@ movies.forEach(movie => {
 
 
 function renderSortMenu(){
-  const sortMovies = sortByTitle(movies);
+  const sortMovies = sortByTitleAsc(movies);
   renderSortMovie(sortMovies);
 }
+
 const renderSortMovie = (sortMovies) => {
+  contenedor.innerHTML = "";
+
+ sortMovies.forEach(elem => {
+
+
+  contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${elem.title}" > <img src= "${elem.poster}" class="img-movie" >
+                                
+                           </a>`
   
- console.log("sort movies",sortMovies)
+ });
+
+}
+
+iconoSortDesc.addEventListener('click', renderSortMenuDesc)
+
+
+function renderSortMenuDesc(){
+  const sortMoviesDesc = sortByTitleDesc(movies);
+  renderSortMovieDesc(sortMoviesDesc);
+}
+
+const renderSortMovieDesc = (sortMoviesDesc) => {
+  contenedor.innerHTML = "";
+
+ sortMoviesDesc.forEach(elem => {
+
+
+  contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${elem.title}" > <img src= "${elem.poster}" class="img-movie" >
+                                
+                           </a>`
+  
+ });
 
 }
 
@@ -75,7 +135,7 @@ const renderSortMovie = (sortMovies) => {
   search.addEventListener("keypress", (event) => {
     if(event.key == "Enter"){
     
-     const result = filterData(movies, search.value);
+     const result = filterData(movies, search.value, 'title');
       renderPosters(result);
       
     } 
