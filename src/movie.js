@@ -62,7 +62,7 @@ console.log("lugardd", movieData.locations);
 
 const person = movieData.people;
 person.forEach(element => {
-    characteres.innerHTML = ` <div class="avatar"> <img
+    characteres.innerHTML += ` <div class="avatar"> <img
                                 src="${element.img}" alt="${element.name}">
                                 <p>${element.name}</p>
                             </div>`
