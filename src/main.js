@@ -1,6 +1,6 @@
 import  { 
   filterData,
-  sortData, 
+  sortByTitle, 
 }  from './data.js';
 
 
@@ -48,17 +48,17 @@ movies.forEach(movie => {
 
  /*llamando sort de titulos */
  
- var titulosmovies = movies.map(function(titulos) {
+ /*var titulosmovies = movies.map(function(titulos) {
   return titulos.title;
 
   
- });
- console.log("titulos movies", titulosmovies)
+ });*/
+
  iconoSort.addEventListener('click', renderSortMenu)
 
 
 function renderSortMenu(){
-  const sortMovies = sortData(titulosmovies);
+  const sortMovies = sortByTitle(movies);
   renderSortMovie(sortMovies);
 }
 const renderSortMovie = (sortMovies) => {
@@ -69,7 +69,7 @@ const renderSortMovie = (sortMovies) => {
 
 
  /*orden alfabetico*/
-console.log("titulos", titulosmovies.sort());
+
 
   /*filtrar imagenes de peliculas para mostrar*/
   search.addEventListener("keypress", (event) => {
