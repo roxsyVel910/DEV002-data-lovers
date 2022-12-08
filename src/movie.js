@@ -1,4 +1,4 @@
-import { filterData } from './data.js';
+import { filterCharacter, filterData } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const descripcionMovieSelct = document.querySelector(".description-movie");  
  const titleMovie = document.querySelector('.titleMovie');  
@@ -30,7 +30,7 @@ console.log("params", params);
 const titleMov = params.get('titulo')
 
 
-const movieData = filterData(movies, titleMov.toLowerCase())[0];
+const movieData = filterData(movies, titleMov.toLowerCase(), 'title')[0];
 console.log(" ksajdoisdfhsoid", movieData)
 
 titleMovie.innerHTML += `<h1 class="nowrap">${movieData.title}</h1>
@@ -62,26 +62,21 @@ console.log("lugardd", movieData.locations);
 
 const person = movieData.people;
 person.forEach(element => {
-    characteres.innerHTML = ` <div class="avatar"> <img
+    characteres.innerHTML += ` <div class="avatar"> <img
                                 src="${element.img}" alt="${element.name}">
                                 <p>${element.name}</p>
                             </div>`
-    console.log("personajes", element);
-    
- const avatClick =  document.querySelector(".avatar");
- avatClick.addEventListener('click', showModalCharacter)
- showModal.innerHTML = `
- <img src=" ${element.img}" class="avatar2" >
- <h1>${element.name}</h1>
- <br>
- <h2>Especie</h2>
- <p>${element.specie}</p>
- <h2>Edad</h2>
- <p>${element.age} </p>
- <h2>Genero</h2>
- <p>${element.gender} </p>`
 
 });
+
+const avatClick =  document.querySelectorAll(".avatar");
+avatClick.forEach(personaje => {
+    personaje.addEventListener('click', (event) => {
+      const personajeActual =  filterCharacter(person ,event.target.alt )
+       showModalCharacter(personajeActual[0]);
+    }); 
+});
+
 
 const vehiculos = movieData.vehicles;
 vehiculos.forEach(car => {
@@ -118,8 +113,20 @@ locacion.forEach(city => {
 // EL ELEMENTO SPAN CIERRA EL MODAL 
 var span = document.getElementsByClassName("close")[0];
 
-function showModalCharacter(){
+function showModalCharacter(element){
+
    modal.style.display = "block";
+   console.log("elemtos personajes", element)
+   showModal.innerHTML = `
+                        <img src="${element.img}" class="avatar2" >
+                        <h1>${element.name}</h1>
+                        <br>
+                        <h2>Especie</h2>
+                        <p>${element.specie}</p>
+                        <h2>Edad</h2>
+                        <p>${element.age} </p>
+                        <h2>Genero</h2>
+                        <p>${element.gender} </p>`
 
 }
 
