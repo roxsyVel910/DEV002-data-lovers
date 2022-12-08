@@ -3,6 +3,8 @@ import data from './data/ghibli/ghibli.js';
 const descripcionMovieSelct = document.querySelector(".description-movie");  
  const titleMovie = document.querySelector('.titleMovie');  
  const characteres = document.querySelector('.avatar-personajes');
+ const modal = document.getElementById("myModal");
+ const showModal = document.querySelector(".modal-content");
 
  
 
@@ -40,21 +42,41 @@ person.forEach(element => {
                             </div>`
         console.log("personajes",element);
     
+ const avatClick =  document.querySelector(".avatar");
+ avatClick.addEventListener('click', showModalCharacter)
+ showModal.innerHTML = `
+ <img src=" ${element.img}" class="avatar2" >
+ <h1>${element.name}</h1>
+ <br>
+ <h2>Especie</h2>
+ <p>${element.specie}</p>
+ <h2>Edad</h2>
+ <p>${element.age} </p>
+ <h2>Genero</h2>
+ <p>${element.gender} </p>`
 
-    });
 
-    var modal = document.getElementById("myModal");
+
+
+ 
+  
+});
 
 // EL BOTON ABRE EL MODAL
-var btn = document.getElementById("myBtn");
+//var btn = document.getElementById("myBtn");
 
 // EL ELEMENTO SPAN CIERRA EL MODAL 
 var span = document.getElementsByClassName("close")[0];
 
-// CUANDO EL USUARIO HACE CLICK Y ABRE EL MODAL
-btn.onclick = function() {
-  modal.style.display = "block";
+function showModalCharacter(){
+   modal.style.display = "block";
+
 }
+
+    
+
+// CUANDO EL USUARIO HACE CLICK Y ABRE EL MODAL
+
 
 // Cuando usuarix haga click en <span> (x), cierre modal 
 span.onclick = function() {
@@ -66,6 +88,10 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+
+
+
+
 };
 
 
