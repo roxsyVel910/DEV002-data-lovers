@@ -9,37 +9,38 @@
 
 
 <body>
- 
+
   <header>
     <nav class="navbar">
-      <img src="./img/icon_menu.svg" alt="menu" class="menu">
+      <img src="./img/menublanco.png" alt="menu" class="menu">
       <div class="navbar-left">
         <img src="./img/logoblanco.png" alt="logo" class="logo">
 
         <ul>
           <li><a href="movie.html">PELICULAS</a></li>
-          <li><a href="personajes.html">PERSONAJES</a></li>
-          <select class="director" name="director">
+          <!-- <li><a href="personajes.html">PERSONAJES</a></li> -->
+
+          <!-- <select class="director" name="director">
 
             <option>DIRECTOR</option>
-            
+
             <option value="Isao Takahata">Isao Takahata</option>
-            
             <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+
+          </select>
+
+          <select class="producer" name="producer">
+           
             
-            </select>
+            <option  >PRODUCTOR</option>
 
-            <select class="producer" name="producer">
+            <option value="Toshio Suzuki">Toshio Suzuki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
 
-              <option >PRODUCTOR</option>
-              
-              <option value="Toshio Suzuki">Toshio Suzuki</option>
-              <option value="Isao Takahata">Isao Takahata</option>
-              <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-              
-              </select>
-          
-          <li>PUNTUACION</li>
+          </select> -->
+
+          <!-- <li>PUNTUACION</li> -->
 
         </ul>
       </div>
@@ -47,10 +48,10 @@
       <div class="navbar-right">
         <ul>
           <li class="sort">
-            <img src="./iconos/icono-search.png" alt="busqueda">
-            </li>
+            <img class="sort1" src="./img/ordenar-az.png" alt="busqueda">
+          </li>
           <li class="sortDesc">
-            <img src="./iconos/icono-search.png" alt="busqueda">
+            <img class="sort2"src="./img/ordenar-za.png" alt="busqueda">
 
           </li>
         </ul>
@@ -60,29 +61,59 @@
         <ul>
           <li> PELICULAS</li>
           <li>PERSONAJES</li>
-          <li>DIRECTOR</li>
-          <li>PRODUCTOR</li>
-          <li>PUNTUACION</li>
+          <!-- <li>DIRECTOR</li>
+          <li>PRODUCTOR</li> -->
+          <!-- <li>PUNTUACION</li> -->
         </ul>
       </div>
     </nav>
   </header>
-   
-  
+
+
 
   <section class="main-container">
     <div class="loader">
       <div></div>
       <div></div>
       <div></div>
-  </div>
-    
-    
-    <div class="buscador">
-      <img class="studio_logo" src="./img/logoblanco.png">
-      <input type="search" class="searchbtn" id="search" placeholder="Buscador" />
     </div>
-    
+
+    <img class="studio_logo" src="./img/logoblanco.png">
+
+    <div class="buscador">
+      <!-- <img class="studio_logo" src="./img/logoblanco.png"> -->
+      <input type="search" class="searchbtn" id="search" placeholder="Buscador" />
+
+
+    </div>
+
+    <div class="directorProductor">
+      <select class="director" name="director">
+
+        <option>DIRECTOR</option>
+
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+
+      </select>
+
+      <select class="producer" name="producer">
+
+
+        <option>PRODUCTOR</option>
+
+        <option value="Toshio Suzuki">Toshio Suzuki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+
+
+      </select>
+
+
+    </div>
+
+
+
     <div class="contenedor-movies" id="contenedor">
     </div>
   </section>
