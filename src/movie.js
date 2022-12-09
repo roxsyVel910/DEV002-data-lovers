@@ -1,10 +1,10 @@
 import { filterCharacter, filterData } from './data.js';
 import data from './data/ghibli/ghibli.js';
-const descripcionMovieSelct = document.querySelector(".description-movie");  
- const titleMovie = document.querySelector('.titleMovie');  
- const characteres = document.querySelector('.avatar-personajes');
- const modal = document.getElementById("myModal");
- const showModal = document.querySelector(".modal-content");
+const descripcionMovieSelct = document.querySelector(".description-movie");
+const titleMovie = document.querySelector('.titleMovie');
+const characteres = document.querySelector('.avatar-personajes');
+const modal = document.getElementById("myModal");
+const showModal = document.querySelector(".modal-content");
 
 
 const posterMovies = document.querySelector('.profile-pic');
@@ -52,7 +52,7 @@ mainbackground.innerHTML += `  <div class="form_ranking">
                                     <label class="label-anio" for="año">${movieData.release_date}</label>
                                 </div> `;
 
-                                                    
+
 
 
 /*manipulación DOM  descripción de peliculas*/
@@ -66,17 +66,15 @@ person.forEach(element => {
                                 src="${element.img}" alt="${element.name}">
                                 <p>${element.name}</p>
                             </div>`
-        console.log("geneross", element.gender);
-
-
+    console.log("geneross", element.gender);
 });
 
-const avatClick =  document.querySelectorAll(".avatar");
+const avatClick = document.querySelectorAll(".avatar");
 avatClick.forEach(personaje => {
     personaje.addEventListener('click', (event) => {
-      const personajeActual =  filterCharacter(person ,event.target.alt )
-       showModalCharacter(personajeActual[0]);
-    }); 
+        const personajeActual = filterCharacter(person, event.target.alt)
+        showModalCharacter(personajeActual[0]);
+    });
 });
 
 
@@ -88,9 +86,9 @@ vehiculos.forEach(car => {
                                     <div class="descripcion-vehiculo">
                                     <p>${car.name}</p>
                                     </div>`
-                                    
-                                
-                                });  
+
+
+});
 const locacion = movieData.locations;
 locacion.forEach(city => {
     containerLocacion.innerHTML += `<div class="contenido-locacion">
@@ -100,13 +98,13 @@ locacion.forEach(city => {
                                     </div>
                                 </div>`
 
-})
-        
+});
 
 
 
 
- 
+
+
 
 
 // EL BOTON ABRE EL MODAL
@@ -115,11 +113,11 @@ locacion.forEach(city => {
 // EL ELEMENTO SPAN CIERRA EL MODAL 
 var span = document.getElementsByClassName("close")[0];
 
-function showModalCharacter(element){
+function showModalCharacter(element) {
 
-   modal.style.display = "block";
-   console.log("elemtos personajes", element)
-   showModal.innerHTML = `
+    modal.style.display = "block";
+    console.log("elemtos personajes", element)
+    showModal.innerHTML = `
                         <img src="${element.img}" class="avatar2" >
                         <h1>${element.name}</h1>
                         <br>
@@ -130,23 +128,23 @@ function showModalCharacter(element){
                         <h2>Genero</h2>
                         <p>${element.gender} </p>`
 
-}
+};
 
-    
+
 
 // CUANDO EL USUARIO HACE CLICK Y ABRE EL MODAL
 
 
 // Cuando usuarix haga click en <span> (x), cierre modal 
-span.onclick = function() {
-  modal.style.display = "none";
+span.onclick = function () {
+    modal.style.display = "none";
 }
 
 // Cuando el usuario haga click fuera del modal, se cierre
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 };
 
 //promedio
