@@ -1,22 +1,11 @@
 // tratamos de filtara los poster por titulo
 
-
-let contenedor = document.querySelector("#contenedor");
-
 export const filterData = (dataMovie, condition, campo) => {
   
-  return dataMovie.filter(movie => movie[campo].toLowerCase().includes(condition));
+  return dataMovie.filter(movie => movie[campo].toLowerCase().includes(condition.toLowerCase()));
 
 }
 
-
-
-export const filterCharacter = (data, condition) => {
-  const campo = "name";
-  
-  return data.filter(movie => movie[campo] === condition);
-
-}
 
 //arr= []
 export const sortByTitleAsc = (data) => {

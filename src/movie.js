@@ -1,6 +1,5 @@
-import { filterCharacter, filterData } from './data.js';
+import { filterData } from './data.js';
 import data from './data/ghibli/ghibli.js';
-const descripcionMovieSelct = document.querySelector(".description-movie");
 const titleMovie = document.querySelector('.titleMovie');
 const characteres = document.querySelector('.avatar-personajes');
 const modal = document.getElementById("myModal");
@@ -30,7 +29,7 @@ console.log("params", params);
 const titleMov = params.get('titulo')
 
 
-const movieData = filterData(movies, titleMov.toLowerCase(), 'title')[0];
+const movieData = filterData(movies, titleMov, 'title')[0];
 console.log(" ksajdoisdfhsoid", movieData)
 
 titleMovie.innerHTML += `<h1 class="nowrap">${movieData.title}</h1>
@@ -72,7 +71,7 @@ person.forEach(element => {
 const avatClick = document.querySelectorAll(".avatar");
 avatClick.forEach(personaje => {
     personaje.addEventListener('click', (event) => {
-        const personajeActual = filterCharacter(person, event.target.alt)
+        const personajeActual = filterData(person, event.target.alt, 'name')
         showModalCharacter(personajeActual[0]);
     });
 });
@@ -128,7 +127,7 @@ function showModalCharacter(element) {
                         <h2>Genero</h2>
                         <p>${element.gender} </p>`
 
-};
+}
 
 
 

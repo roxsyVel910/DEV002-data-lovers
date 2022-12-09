@@ -15,14 +15,9 @@ let contenedor = document.querySelector("#contenedor");
 const iconMenu = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const search = document.querySelector("#search");
-
-const descripcionMovieSelct = document.querySelector(".description-movie");
-const titleMovie = document.querySelector('.titleMovie');
-let idMovie = document.querySelectorAll(".idMovie");
 const iconoSort = document.querySelector(".sort");
 const iconoSortDesc = document.querySelector(".sortDesc");
 const directorName = document.querySelector(".director");
-const contenedorPromedio = document.querySelector(".promedio");
 const productorName = document.querySelector(".producer");
 const directorNameMovies = 'director';
 
@@ -33,9 +28,9 @@ console.log("productorrr", productorName.value);
 
 /*filtrado de directores*/
 
-directorName.addEventListener('change', (event) => {
+directorName.addEventListener('change', () => {
   console.log('Me deben una cerveza', directorName.value)
-  const changeDirectors = filterData(movies, directorName.value.toLowerCase(), directorNameMovies);
+  const changeDirectors = filterData(movies, directorName.value, directorNameMovies);
   renderDirectores(changeDirectors);
 });
 
@@ -52,9 +47,9 @@ const renderDirectores = (changeDirectors) => {
 
 /*filtrado de productores */
 
-productorName.addEventListener('change', (event) => {
-  console.log("ñauiiiiiiiiiii")
-  const filmsProductor = filterData(movies, productorName.value.toLowerCase(), "producer");
+productorName.addEventListener('change', () => {
+ 
+  const filmsProductor = filterData(movies, productorName.value, "producer");
   renderProductores(filmsProductor);
 })
 
@@ -93,17 +88,7 @@ movies.forEach(movie => {
 
 });
 
-/* filtrar peliculas por director*/
 
-//document.querySelector('.movies').addEventListener('click', posterMovie);
-
-/*llamando sort de titulos */
-
-/*var titulosmovies = movies.map(function(titulos) {
- return titulos.title;
-
- 
-});*/
 
 iconoSort.addEventListener('click', renderSortMenu)
 
@@ -175,16 +160,4 @@ const renderPosters = (result) => {
 
 }
 
-
-
-// import data from './data/lol/lol.js';
-//import data from './data/ghibli/ghibli.js';
-
-/*const API = './data/ghibli/ghibli.json/films';
-
-fetch(API)
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
-  }); */
 
