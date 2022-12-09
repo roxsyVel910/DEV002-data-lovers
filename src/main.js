@@ -17,14 +17,19 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const search = document.querySelector("#search");
 
 const descripcionMovieSelct = document.querySelector(".description-movie");  
- const titleMovie = document.querySelector('.titleMovie');  
- let idMovie = document.querySelectorAll(".idMovie");
- const iconoSort = document.querySelector(".sort");
+const titleMovie = document.querySelector('.titleMovie');  
+let idMovie = document.querySelectorAll(".idMovie");
+const iconoSort = document.querySelector(".sort");
 const iconoSortDesc = document.querySelector(".sortDesc");
 const directorName = document.querySelector(".director");
-const productorName = document.querySelector(".productor");
- const directorNameMovies = 'director';
- const  director = directorName.value;
+const productorName = document.querySelector(".producer");
+const directorNameMovies = 'director';
+
+
+
+console.log("productorrr", productorName.value);
+
+
 /*filtrado de directores*/
 
 directorName.addEventListener('change', (event) => {
@@ -43,11 +48,29 @@ const renderDirectores = (changeDirectors) => {
                              </a>`
  }); 
 }
-/*filtrado de productores 
+
+/*filtrado de productores */
+
 productorName.addEventListener('change', (event) => {
-  const filmsProductor = filterProductor(movies.productorName.value, 'producer');
-  console.log(" producers",filmsProductor)
-})*/
+  console.log("ñauiiiiiiiiiii")
+ const filmsProductor = filterData(movies, productorName.value.toLowerCase(), "producer");
+  renderProductores(filmsProductor);
+})
+
+const renderProductores = (filmsProductor) => {
+  console.log("productor",filmsProductor)
+
+  contenedor.innerHTML = "";
+  filmsProductor.forEach(elem => {
+    contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${elem.title}" > <img src= "${elem.poster}" class="img-movie" >
+                                  
+                             </a>`
+ }); 
+}
+
+
+
+
 
 
 iconMenu.addEventListener('click', toggleMobileMenu);
@@ -60,8 +83,6 @@ function toggleMobileMenu(){
 /*llamando al todo el API de studios Gilbli*/
  const movies = data.films
 
-
-  
  /* mostara poster de peliculas en el Dom*/
 movies.forEach(movie => {
 

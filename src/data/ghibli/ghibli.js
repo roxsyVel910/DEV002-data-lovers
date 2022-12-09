@@ -803,9 +803,8 @@ export default {
       "title": "Pom Poko",
       "description": "As the human city development encroaches on the raccoon population's forest and meadow habitat, the raccoons find themselves faced with the very real possibility of extinction. In response, the raccoons engage in a desperate struggle to stop the construction and preserve their home.",
       "director": "Isao Takahata",
-      
-      
-      : "Toshio Suzuki",
+
+      "producer":"Toshio Suzuki",
       "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9e/Pom_Poko.jpg",
       "release_date": "1994",
       "rt_score": "78",
