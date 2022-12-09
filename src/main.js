@@ -23,8 +23,8 @@ const descripcionMovieSelct = document.querySelector(".description-movie");
 const iconoSortDesc = document.querySelector(".sortDesc");
 const directorName = document.querySelector(".director");
 const productorName = document.querySelector(".productor");
+const contenedorPromedio = document.querySelector(".promedio");
  const directorNameMovies = 'director';
- const  director = directorName.value;
 /*filtrado de directores*/
 
 directorName.addEventListener('change', (event) => {

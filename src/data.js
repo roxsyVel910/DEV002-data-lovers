@@ -4,7 +4,6 @@
 let contenedor = document.querySelector("#contenedor");
 
 export const filterData = (dataMovie, condition, campo) => {
-
   
   return dataMovie.filter(movie => movie[campo].toLowerCase().includes(condition));
 
@@ -19,7 +18,7 @@ export const filterCharacter = (data, condition) => {
 
 }
 
-
+//arr= []
 export const sortByTitleAsc = (data) => {
   return data.sort(function (a, b) {
     if (a.title < b.title) {
@@ -49,6 +48,5 @@ export const sortByTitleDesc = (data) => {
 
 }
  /* sortData(data, sortBy, sortOrder)*/
-
 
 

@@ -66,6 +66,8 @@ person.forEach(element => {
                                 src="${element.img}" alt="${element.name}">
                                 <p>${element.name}</p>
                             </div>`
+        console.log("geneross", element.gender);
+
 
 });
 
@@ -145,11 +147,11 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-
-
-
-
 };
+
+//promedio
+
+
 
 
 
