@@ -22,7 +22,7 @@ El presente proyecto, es una aplicación web donde el usuario puede ver informac
  2. Fidelizar al usuario brindándole una experiencia integral.
 ## 2. Historias de Usuario
 
-![prototipo](https://raw.githubusercontent.com/roxsyVel910/DEV002-data-lovers/bd728c45549a5c8ca36ee58a3a39e077453f024a/src/img/prototipo_baja.png)
+![historias de usuario](https://raw.githubusercontent.com/roxsyVel910/DEV002-data-lovers/main/src/img/Historia%20de%20usuario.png)
 
 ## 3. Diseño de Interfaz de Usuario
 
