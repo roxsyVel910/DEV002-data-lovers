@@ -34,7 +34,7 @@ console.log("productorrr", productorName.value);
 
 directorName.addEventListener('change', (event) => {
   console.log('Me deben una cerveza', directorName.value)
-  const changeDirectors = filterData(movies, directorName.value.toLowerCase(), directorNameMovies);
+  const changeDirectors = filterData(movies, directorName.value, directorNameMovies);
   renderDirectores(changeDirectors);
 });
 
@@ -104,7 +104,7 @@ movies.forEach(movie => {
  
 });*/
 
-iconoSort.addEventListener('click', renderSortMenu)
+iconoSort.addEventListener('click', renderSortMenu);
 
 
 function renderSortMenu() {
