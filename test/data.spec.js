@@ -153,7 +153,7 @@ const arrExpectedFemale = 2;
 
 describe('filterData', () => {
 
- it('Deberia un array de objetos con el nombre del director filtrado', () => {
+ it('Deberia ser array de objetos con el nombre del director filtrado', () => {
 
    const resultado = filterData(data.films, 'Hayao Miyazak', 'director');
    expect(resultado).toEqual(arrExpected);
@@ -194,7 +194,7 @@ describe('sortByTitleAsc ', () => {
  })
  describe('omputeStatsFemale', () => {
 
-  it('Existen 1 personaje mujer', () => {
+  it('Existen 2 personaje mujer', () => {
  
     const resultado = computeStatsFemale(data.people);
     expect(resultado).toEqual(arrExpectedFemale);
