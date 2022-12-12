@@ -71,8 +71,8 @@ const hombre  = computeStatsMale(person)
 const mujer = computeStatsFemale(person)
 console.log("mujer", mujer, hombre);
 promedio.innerHTML += `<h2> GENERO DE PERSONAJES<h3>
-                        <p> Total de hombres : ${hombre} </p>
-                        <p> : Total de Mujeres: ${mujer} </p>`
+                        <h3> Total de hombres : ${hombre} </h3>
+                        <h3> Total de Mujeres: ${mujer} </h3>`
 
 
 
@@ -85,17 +85,7 @@ avatClick.forEach(personaje => {
 });
 
 
-const vehiculos = movieData.vehicles;
-vehiculos.forEach(car => {
-    vehiclesContainer.innerHTML = `<div class="img-vehiculo">
-                                    <img src="${car.img}" alt="">
-                                    </div>
-                                    <div class="descripcion-vehiculo">
-                                    <p>${car.name}</p>
-                                    </div>`
 
-
-});
 const locacion = movieData.locations;
 locacion.forEach(city => {
     containerLocacion.innerHTML += `<div class="contenido-locacion">
@@ -107,12 +97,6 @@ locacion.forEach(city => {
 
 });
 
-
-
-// EL BOTON ABRE EL MODAL
-//var btn = document.getElementById("myBtn");
-
-// EL ELEMENTO SPAN CIERRA EL MODAL 
 var span = document.getElementsByClassName("close")[0];
 
 function showModalCharacter(element) {

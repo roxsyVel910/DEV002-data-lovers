@@ -46,7 +46,7 @@ body {
   margin: 3em;
   width: 680px;
   height: 330px;
-  
+
 }
 
 
@@ -79,7 +79,7 @@ nav {
   position: relative;
   right: 10em;
   bottom: 6em;
- 
+
 
 }
 
@@ -108,7 +108,7 @@ nav {
   justify-content: space-between;
   bottom: 60px;
   right: 24%;
-  
+
 }
 
 /* DIRECTOR BUSCADOR */
@@ -160,8 +160,9 @@ nav {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
   height: 60px;
+  text-align: center;
+
 }
 
 .navbar-left {
@@ -191,7 +192,7 @@ nav {
   color: #ffffff;
   font-size: 16px;
   margin-right: 22px;
-  
+
 }
 
 .navbar-shopping-cart {
@@ -391,12 +392,12 @@ nav {
 .profile-pic {
   width: 50%;
   margin-right: 10%;
-  
+
 
 }
 
 .profile-pic img {
-  
+
   width: 100%;
   height: auto;
   margin-top: auto 30px;
@@ -503,18 +504,19 @@ h2 {
   font-size: 30px;
   text-align: center;
 
+  margin: 1%;
+
 }
 
 h3 {
   text-shadow: 0px 4px 4px rgb(0, 0, 0);
-  margin: 15%;
+  margin: 3%;
+  padding: 0%;
   font-size: 30px;
   text-align: center;
-
 }
 
 /*locacion containerr */
-
 .locaciones-contenedor {
   display: grid;
   grid-template-columns: repeat(auto-fill, 400px);
@@ -523,7 +525,7 @@ h3 {
   padding-left: 3%;
   padding-right: 3%;
   background-color: #d37dcf;
-
+  padding: 5%;
 }
 
 .locaciones-contenedor .contenido-locacion img {
@@ -534,37 +536,10 @@ h3 {
   text-shadow: 0px 4px 4px rgb(0, 0, 0);
   text-align: center;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.527);
+  display: inline-block;
 
 }
 
-.vehiculos-container {
-
-  width: 100%;
-  height: 600px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #ECEC9F;
-
-
-}
-
-.vehiculos-container .img-vehiculo {
-  width: 40%;
-  margin-left: 20%;
-  margin-right: 10px;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.527);
-}
-
-.img-vehiculo img {
-  width: 100%;
-  border-radius: 10px;
-  border: 5px solid #ffffff;
-}
-
-.descripcion-vehiculo {
-  margin: 30px 20px;
-}
 
 @media screen and (max-width:900px) {
   .contenido-slider>img {
@@ -615,11 +590,19 @@ h3 {
     display: none;
   }
 
+  .avatar2 {
+    display: none;
+  }
+
 }
 
 @media (min-width: 641px) {
   .mobile-menu {
     display: none;
+  }
+
+  .avatar2 {
+    display: flex;
   }
 }
 
@@ -639,15 +622,15 @@ body{
 
   /* Pagina Inicio */
 
-
+.container-inicio {
+  background-color: #f074bc;
+  background-size : 10%;
+}
 
 .fondo-inicio {
-  position: relative;
-  top: -490px;
-  z-index: -1;
-
-
-}
+  background-color: #f074bc; 
+   position: relative; 
+}  
 
 .logo-inicio {
 
@@ -760,9 +743,7 @@ body{
   height: 40px;
   border-radius: 50%;
   margin: 10px;
-
   transform: scale(0);
-
   animation: scaling 2s ease-in-out infinite;
 }
 
@@ -799,13 +780,10 @@ body{
 
 /* MODAL */
 
-
-
 #myBtn {
 
   position: absolute;
   background-size: 100%;
-
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -862,15 +840,20 @@ body{
 
 .avatar2 {
   position: relative;
-  width: 80%;
   left: 30%;
   background-size: 90%;
   width: 300px;
   height: 300px;
   border-radius: 50%;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.527);
-
 }
+
+
+.promedio {
+  background-color: auto #6AAED4;
+  padding: 5%;
+}
+
 
 .footer-us {
   overflow: hidden;
