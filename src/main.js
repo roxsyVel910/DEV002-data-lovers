@@ -12,8 +12,7 @@ import data from './data/ghibli/ghibli.js';
 
 
 let contenedor = document.querySelector("#contenedor");
-const iconMenu = document.querySelector(".menu");
-const mobileMenu = document.querySelector(".mobile-menu");
+
 const search = document.querySelector("#search");
 const iconoSort = document.querySelector(".sort");
 const iconoSortDesc = document.querySelector(".sortDesc");
@@ -63,18 +62,6 @@ const renderProductores = (filmsProductor) => {
                              </a>`
   });
 }
-
-
-
-
-
-
-iconMenu.addEventListener('click', toggleMobileMenu);
-
-function toggleMobileMenu() {
-  mobileMenu.classList.toggle('activo');
-}
-
 
 /*llamando al todo el API de studios Gilbli*/
 const movies = data.films
