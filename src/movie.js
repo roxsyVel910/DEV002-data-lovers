@@ -120,18 +120,12 @@ function showModalCharacter(element) {
     modal.style.display = "block";
 
     showModal.innerHTML = `
-                        <img src="${element.img}" class="avatar2" >
-                        <h1>${element.name}</h1>
-                        <br>
-                        <h2>Especie</h2>
-                        <p>${element.specie}</p>
-                        <h2>Edad</h2>
-                        <p>${element.age} </p>
-                        <h2>Genero</h2>
-                        <p>${element.gender} </p>`
+                        <img src="${element.img}" class="avatar2"> <br>
+                        <h2>${element.name}</h2> <br>
+                        <h2>${element.specie}</h2><br>
+                        <h2>${element.age} </h2><br>
+                        <h2>${element.gender} </h2><br>`
                     
-
-            
 }
 
 
