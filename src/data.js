@@ -7,7 +7,9 @@ export const filterData = (dataMovie, condition, campo) => {
 }
 
 
+
 //arr= []
+
 export const sortByTitleAsc = (data) => {
   return data.sort(function (a, b) {
     if (a.title < b.title) {
@@ -38,4 +40,17 @@ export const sortByTitleDesc = (data) => {
 }
  /* sortData(data, sortBy, sortOrder)*/
 
+    
+
+
+ export const computeStatsMale = (data) => {
+ 
+  return data.filter((character) => character.gender == "Male").length;
+  
+}
+
+export const computeStatsFemale = (data) => {
+
+    return data.filter((character) => character.gender == "Female").length;
+  }
 

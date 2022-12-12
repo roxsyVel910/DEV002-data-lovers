@@ -1,4 +1,7 @@
-import { filterData } from './data.js';
+import { filterData,
+    computeStatsMale,
+    computeStatsFemale ,
+} from './data.js';
 import data from './data/ghibli/ghibli.js';
 const titleMovie = document.querySelector('.titleMovie');
 const characteres = document.querySelector('.avatar-personajes');
@@ -10,6 +13,7 @@ const posterMovies = document.querySelector('.profile-pic');
 const mainbackground = document.querySelector('.form_director');
 const vehiclesContainer = document.querySelector('.vehiculos-container');
 const containerLocacion = document.querySelector('.locaciones-contenedor');
+const promedio = document.querySelector('.promedio');
 
 
 
@@ -18,11 +22,9 @@ const movies = data.films
 
 
 const queryString = window.location.search;
-console.log("parametros", queryString);
 
 
 const params = new URLSearchParams(queryString);
-console.log("params", params);
 
 
 
@@ -30,7 +32,6 @@ const titleMov = params.get('titulo')
 
 
 const movieData = filterData(movies, titleMov, 'title')[0];
-console.log(" ksajdoisdfhsoid", movieData)
 
 titleMovie.innerHTML += `<h1 class="nowrap">${movieData.title}</h1>
                         <p class="description-movie">${movieData.description}</p>`;
@@ -56,7 +57,6 @@ mainbackground.innerHTML += `  <div class="form_ranking">
 
 /*manipulación DOM  descripción de peliculas*/
 
-console.log("lugardd", movieData.locations);
 
 
 const person = movieData.people;
@@ -65,8 +65,16 @@ person.forEach(element => {
                                 src="${element.img}" alt="${element.name}">
                                 <p>${element.name}</p>
                             </div>`
-    console.log("geneross", element.gender);
 });
+/*promedio de genero*/
+const hombre  = computeStatsMale(person)
+const mujer = computeStatsFemale(person)
+console.log("mujer", mujer, hombre);
+promedio.innerHTML += `<h2> GENERO DE PERSONAJES<h3>
+                        <p> Total de hombres : ${hombre} </p>
+                        <p> : Total de Mujeres: ${mujer} </p>`
+
+
 
 const avatClick = document.querySelectorAll(".avatar");
 avatClick.forEach(personaje => {
@@ -115,7 +123,7 @@ var span = document.getElementsByClassName("close")[0];
 function showModalCharacter(element) {
 
     modal.style.display = "block";
-    console.log("elemtos personajes", element)
+
     showModal.innerHTML = `
                         <img src="${element.img}" class="avatar2" >
                         <h1>${element.name}</h1>
@@ -126,7 +134,9 @@ function showModalCharacter(element) {
                         <p>${element.age} </p>
                         <h2>Genero</h2>
                         <p>${element.gender} </p>`
+                    
 
+            
 }
 
 

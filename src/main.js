@@ -156,8 +156,8 @@ const renderPosters = (result) => {
     contenedor.innerHTML += `<a class="movies" href ="movie?titulo=${element.title}" > <img src= "${element.poster}" class="img-movie" >
                                 
                              </a>`
+                             
   });
 
 }
-
 
