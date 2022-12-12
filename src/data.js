@@ -1,15 +1,14 @@
 // tratamos de filtara los poster por titulo
 
-export const filterData = (dataMovie, condition, campo) => {
-  
-  return dataMovie.filter(movie => movie[campo].toLowerCase().includes(condition.toLowerCase()));
 
+export const filterData = (dataMovie, condition, cambiar) => {
+  return dataMovie.filter(movie => movie[cambiar].toLowerCase().includes(condition.toLowerCase()));
 }
 
 
 
-//arr= []
 
+//TODO: agregar dos parametros, como esta en el readme
 export const sortByTitleAsc = (data) => {
   return data.sort(function (a, b) {
     if (a.title < b.title) {
@@ -24,6 +23,8 @@ export const sortByTitleAsc = (data) => {
   // [{title: 'abc'},{title: 'zyc'},{}]
 
 }
+
+// TODO: procurar eliminar esta funcion
 export const sortByTitleDesc = (data) => {
   return data.sort(function (a, b) {
     if (a.title > b.title) {
@@ -36,11 +37,8 @@ export const sortByTitleDesc = (data) => {
     return 0;
   });
   // [{title: 'abc'},{title: 'zyc'},{}]
-
 }
  /* sortData(data, sortBy, sortOrder)*/
-
-    
 
 
  export const computeStatsMale = (data) => {
@@ -53,4 +51,3 @@ export const computeStatsFemale = (data) => {
 
     return data.filter((character) => character.gender == "Female").length;
   }
-

@@ -38,7 +38,7 @@ titleMovie.innerHTML += `<h1 class="nowrap">${movieData.title}</h1>
 posterMovies.innerHTML = `<img src="${movieData.poster} ">`;
 mainbackground.innerHTML += `  <div class="form_ranking">
 
-                                    <label class="label-ranking" for="ranking">${movieData.rt_score}</label>
+                                    <label class="label-ranking" for="ranking">${movieData.rt_score}<img src="./img/star.png" alt="estrella"></label>
                                 </div>
 
                                 <div class="form_año">
@@ -106,11 +106,6 @@ locacion.forEach(city => {
                                 </div>`
 
 });
-
-
-
-
-
 
 
 

@@ -158,8 +158,10 @@ describe('filterData', () => {
    const resultado = filterData(data.films, 'Hayao Miyazak', 'director');
    expect(resultado).toEqual(arrExpected);
  })
-
 })
+
+
+
 
 describe('sortByTitleAsc ', () => {
 
