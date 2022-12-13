@@ -75,30 +75,41 @@ nav {
 
 
 }
-
-
-.iconosSort {
-  align-items: center;
-  position: relative;
-  right: 10em;
-  bottom: 6em;
-
-
+.fltrados{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
 }
 
 
+.iconosSort {
+  
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap:10px;
+
+}
+
+.sort{
+  text-align:right;
+  
+
+}
+.sortDesc {
+  text-align:left;
+}
 .sort1 {
-  position: absolute;
+ 
   width: 30px;
   height: 30px;
-  justify-content: left;
-  right: 90px;
   top: 3px;
+  align-self: end;
 
 }
 
 .sort2 {
-  position: absolute;
+
+  
   width: 30px;
   height: 30px;
   right: 40px;
@@ -107,10 +118,10 @@ nav {
 
 
 .directorProductor {
-  position: relative;
+  /*position: relative;
   justify-content: space-between;
   bottom: 60px;
-  right: 24%;
+  right: 24%;*/
 
 }
 
@@ -287,7 +298,7 @@ nav {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
   margin-left: 5%;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.527);
 }
@@ -518,13 +529,16 @@ h3 {
 }
 
 
-@media screen and (max-width:120px) {
- 
 
+
+
+
+
+@media (max-width: 1500px) {
+  .life .titleMovie h1{
+    font-size: 40px;
+   }
 }
-
-
-
 @media (max-width: 960px) {
   .life .titleMovie h1{
     font-size: 25px;
@@ -532,11 +546,6 @@ h3 {
    .mainbackground_down .form_director {
     font-size: 15px;
   }
-}
-@media (max-width: 1500px) {
-  .life .titleMovie h1{
-    font-size: 50px;
-   }
 }
 
 @media (max-width: 640px) {
@@ -567,13 +576,18 @@ h3 {
     width: 90%;
    }
 
+   .mainbackground_down .form_director{
+
+    margin-left: 10px;
+   }
+   .form_director div{
+    padding: 15px 0px;
+   }
    .life .titleMovie h1{
     font-size: 18px;
    }
   
-  .buscador {
-    display: none;
-  }
+ 
 
   .navbar-left ul {
     display: none;
