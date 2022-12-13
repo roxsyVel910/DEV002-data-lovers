@@ -8,11 +8,7 @@ import {
 
 import data from './data/ghibli/ghibli.js';
 
-
-
-
 let contenedor = document.querySelector("#contenedor");
-
 const search = document.querySelector("#search");
 const iconoSort = document.querySelector(".sort");
 const iconoSortDesc = document.querySelector(".sortDesc");
@@ -148,3 +144,16 @@ const renderPosters = (result) => {
 
 }
 
+let Array = [
+  {nombre: 'Harry', tipo: 'humano'},
+  {nombre: 'hermaiony', tipo: 'humano'},
+  {nombre: 'Peter', tipo: 'elfo'}
+]
+
+function filtarHumanos(array){
+  return array.filter(arr => arr.tipo == 'humano')
+}
+
+let resultado = filtarHumanos(Array)
+
+console.log("rpta",resultado)
