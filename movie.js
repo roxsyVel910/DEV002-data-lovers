@@ -1,6 +1,7 @@
-import { filterData,
-    computeStatsMale,
-    computeStatsFemale ,
+import {
+  filterData,
+  computeStatsMale,
+  computeStatsFemale,
 } from './data.js';
 import data from './data/ghibli/ghibli.js';
 const titleMovie = document.querySelector('.titleMovie');
@@ -61,13 +62,13 @@ mainbackground.innerHTML += `  <div class="form_ranking">
 
 const person = movieData.people;
 person.forEach(element => {
-    characteres.innerHTML += ` <div class="avatar"> <img
+  characteres.innerHTML += ` <div class="avatar"> <img
                                 src="${element.img}" alt="${element.name}">
                                 <p>${element.name}</p>
                             </div>`
 });
 /*promedio de genero*/
-const hombre  = computeStatsMale(person)
+const hombre = computeStatsMale(person)
 const mujer = computeStatsFemale(person)
 console.log("mujer", mujer, hombre);
 promedio.innerHTML += `<h2> GENERO DE PERSONAJES<h3>
@@ -78,17 +79,17 @@ promedio.innerHTML += `<h2> GENERO DE PERSONAJES<h3>
 
 const avatClick = document.querySelectorAll(".avatar");
 avatClick.forEach(personaje => {
-    personaje.addEventListener('click', (event) => {
-        const personajeActual = filterData(person, event.target.alt, 'name')
-        showModalCharacter(personajeActual[0]);
-    });
+  personaje.addEventListener('click', (event) => {
+    const personajeActual = filterData(person, event.target.alt, 'name')
+    showModalCharacter(personajeActual[0]);
+  });
 });
 
 
 
 const locacion = movieData.locations;
 locacion.forEach(city => {
-    containerLocacion.innerHTML += `<div class="contenido-locacion">
+  containerLocacion.innerHTML += `<div class="contenido-locacion">
                                     <img src="${city.img}" alt="">
                                     <div>
                                         <h2>${city.name}</h2>
@@ -101,15 +102,15 @@ var span = document.getElementsByClassName("close")[0];
 
 function showModalCharacter(element) {
 
-    modal.style.display = "block";
+  modal.style.display = "block";
 
-    showModal.innerHTML = `
+  showModal.innerHTML = `
                         <img src="${element.img}" class="avatar2"> <br>
-                        <h2>${element.name}</h2> <br>
-                        <h2>${element.specie}</h2><br>
-                        <h2>${element.age} </h2><br>
-                        <h2>${element.gender} </h2><br>`
-                    
+                        <h3>${element.name}</h3>
+                        <h3>${element.specie}</h3>
+                        <h3>${element.age} </h3>
+                        <h3>${element.gender} </h3>`
+
 }
 
 
@@ -117,16 +118,16 @@ function showModalCharacter(element) {
 // CUANDO EL USUARIO HACE CLICK Y ABRE EL MODAL
 
 
-// Cuando usuarix haga click en <span> (x), cierre modal 
+// Cuando usuarix haga click en <span> (x), cierre modal
 span.onclick = function () {
-    modal.style.display = "none";
+  modal.style.display = "none";
 }
 
 // Cuando el usuario haga click fuera del modal, se cierre
 window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 };
 
 //promedio
